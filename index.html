@@ -3,17 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Lohit Lingam — Product marketing and growth across fintech. Selected work in go-to-market strategy, experimentation, AI-enabled personalization, and product experiences.">
+  <meta
+    name="description"
+    content="Lohit Lingam — Product marketing and growth across B2B and B2C fintech. Experience spanning consumer growth, banking partnerships, lending technology, and go-to-market strategy."
+  >
   <meta name="theme-color" content="#0b1120">
   <meta property="og:title" content="Lohit Lingam | Product Marketing & Growth">
-  <meta property="og:description" content="Customer insight. Clear propositions. Measurable growth. Explore selected launches, experiments, and product initiatives.">
+  <meta
+    property="og:description"
+    content="Connecting customer insight, product value, and go-to-market execution across B2B and B2C fintech."
+  >
   <meta property="og:type" content="website">
+
   <title>Lohit Lingam | Product Marketing & Growth</title>
 
   <style>
     :root {
       --bg: #0b1120;
       --surface: #141f33;
+      --surface-dark: #101a2b;
       --text: #f4f7fc;
       --muted: #a4b1c6;
       --blue: #8db8ff;
@@ -32,10 +40,10 @@
 
     body {
       margin: 0;
-      font-family: Inter, -apple-system, BlinkMacSystemFont,
-                   "Segoe UI", sans-serif;
       background: var(--bg);
       color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", sans-serif;
       line-height: 1.7;
     }
 
@@ -59,8 +67,8 @@
 
     .skip {
       position: absolute;
-      left: 20px;
       top: -100px;
+      left: 20px;
       z-index: 10;
       padding: 10px 18px;
       background: var(--blue);
@@ -93,7 +101,8 @@
 
     .navlinks {
       display: flex;
-      gap: 25px;
+      flex-wrap: wrap;
+      gap: 24px;
       color: var(--muted);
       font-size: 14px;
     }
@@ -104,39 +113,45 @@
 
     .hero {
       padding: 100px 0 78px;
-      position: relative;
     }
 
     .eyebrow {
       color: var(--blue);
-      text-transform: uppercase;
-      letter-spacing: 2px;
       font-size: 12px;
       font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
     }
 
     h1 {
       max-width: 980px;
+      margin: 23px 0;
       font-size: clamp(42px, 6vw, 76px);
       line-height: 1.12;
       letter-spacing: -3px;
-      margin: 23px 0;
     }
 
     h1 span {
       color: var(--blue);
     }
 
+    h2 {
+      margin: 12px 0 16px;
+      font-size: clamp(29px, 4vw, 38px);
+      line-height: 1.25;
+      letter-spacing: -1px;
+    }
+
     .intro {
-      max-width: 735px;
-      font-size: 19px;
+      max-width: 770px;
       color: var(--muted);
+      font-size: 19px;
     }
 
     .actions {
       display: flex;
-      gap: 15px;
       flex-wrap: wrap;
+      gap: 15px;
       margin-top: 32px;
     }
 
@@ -144,9 +159,9 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
+      padding: 12px 22px;
       border: 1px solid transparent;
       border-radius: 9px;
-      padding: 12px 22px;
       background: var(--blue);
       color: #081222;
       font-size: 14px;
@@ -159,9 +174,9 @@
     }
 
     .btn.secondary {
+      border-color: var(--border);
       background: transparent;
       color: var(--text);
-      border-color: var(--border);
     }
 
     .btn.secondary:hover {
@@ -170,54 +185,47 @@
 
     .metrics {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 30px;
       padding: 30px 0;
       border-block: 1px solid var(--border);
     }
 
     .metric strong {
-      font-size: 35px;
       display: block;
+      font-size: 35px;
       line-height: 1.2;
       letter-spacing: -1px;
     }
 
     .metric p {
+      margin: 9px 0 0;
       color: var(--muted);
       font-size: 14px;
-      margin: 9px 0 0;
     }
 
     section {
       padding: 70px 0;
     }
 
-    h2 {
-      font-size: clamp(29px, 4vw, 38px);
-      line-height: 1.25;
-      letter-spacing: -1px;
-      margin: 12px 0 16px;
-    }
-
     .subtitle {
+      max-width: 760px;
       color: var(--muted);
-      max-width: 735px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
       gap: 24px;
       margin-top: 34px;
-      align-items: start;
     }
 
     .card {
-      background: var(--surface);
+      overflow: hidden;
       border: 1px solid var(--border);
       border-radius: 16px;
-      overflow: hidden;
+      background: var(--surface);
       transition: border-color 0.2s;
     }
 
@@ -234,28 +242,31 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
     .tag {
       color: var(--blue);
       font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 1.3px;
       font-weight: 700;
+      letter-spacing: 1.3px;
+      text-transform: uppercase;
     }
 
-    .year {
-      font-size: 12px;
+    .label {
+      padding: 3px 9px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
       color: var(--muted);
-      white-space: nowrap;
+      font-size: 11px;
     }
 
     .card h3 {
+      margin: 18px 0 12px;
       font-size: 25px;
       line-height: 1.3;
       letter-spacing: -0.45px;
-      margin: 18px 0 12px;
     }
 
     .card p {
@@ -264,9 +275,9 @@
     }
 
     .card .role {
+      margin: 22px 0;
       color: var(--text);
       font-size: 13px;
-      margin: 22px 0 18px;
     }
 
     .role span {
@@ -274,21 +285,22 @@
     }
 
     .visual {
-      min-height: 102px;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      background: #101a2b;
-      padding: 18px;
-      margin: 22px 0;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 10px;
+      min-height: 100px;
+      margin: 22px 0;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface-dark);
     }
 
     .offer {
-      text-align: center;
       flex: 1;
+      text-align: center;
     }
 
     .offer b {
@@ -296,14 +308,13 @@
       color: var(--blue);
       font-size: 30px;
       line-height: 1.2;
-      letter-spacing: -1px;
     }
 
     .offer small {
       display: block;
       margin-top: 5px;
-      font-size: 11px;
       color: var(--muted);
+      font-size: 11px;
     }
 
     .divider {
@@ -313,17 +324,12 @@
     }
 
     .pill {
+      padding: 8px 11px;
       border: 1px solid #3d5578;
       border-radius: 6px;
       color: #c9dcf9;
-      padding: 9px 12px;
       font-size: 12px;
       text-align: center;
-    }
-
-    .visual.concepts {
-      flex-wrap: wrap;
-      gap: 8px;
     }
 
     details {
@@ -331,14 +337,15 @@
     }
 
     summary {
-      cursor: pointer;
-      font-size: 13px;
-      color: var(--blue);
-      font-weight: 700;
-      padding: 18px 30px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 15px;
+      padding: 18px 30px;
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
       list-style: none;
     }
 
@@ -366,9 +373,9 @@
     }
 
     .case-body h4 {
-      font-size: 13px;
       margin: 19px 0 5px;
       color: var(--text);
+      font-size: 13px;
     }
 
     .case-body p {
@@ -378,40 +385,44 @@
 
     .status {
       color: var(--mint);
-      font-size: 11px;
-      font-weight: 600;
     }
 
-    .more-work {
-      margin-top: 40px;
-      padding-top: 30px;
-      border-top: 1px solid var(--border);
-    }
-
-    .more-work h3 {
-      font-size: 18px;
-      margin: 0 0 16px;
-    }
-
-    .project-list {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px 32px;
-    }
-
-    .project-list h4 {
-      font-size: 15px;
-      margin: 0 0 4px;
-    }
-
-    .project-list p {
-      font-size: 14px;
-      color: var(--muted);
-      margin: 0;
-    }
-
+    #b2b,
     #about {
       border-top: 1px solid var(--border);
+    }
+
+    .b2b-card .tag {
+      color: var(--mint);
+    }
+
+    .b2b-card .visual {
+      justify-content: flex-start;
+    }
+
+    .b2b-card .pill {
+      border-color: #355b58;
+      color: #c0e8dc;
+    }
+
+    .perspective {
+      margin-top: 28px;
+      padding: 24px 28px;
+      border-left: 3px solid var(--mint);
+      border-radius: 0 10px 10px 0;
+      background: var(--surface-dark);
+    }
+
+    .perspective h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+
+    .perspective p {
+      max-width: 900px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
     }
 
     .about-layout {
@@ -422,9 +433,9 @@
     }
 
     .about {
+      margin: 0 0 18px;
       color: var(--muted);
       font-size: 17px;
-      margin: 0 0 18px;
     }
 
     .approach {
@@ -433,31 +444,31 @@
     }
 
     .approach h3 {
-      font-size: 15px;
       margin: 0 0 4px;
+      font-size: 15px;
     }
 
     .approach p {
+      margin: 0 0 22px;
       color: var(--muted);
       font-size: 14px;
-      margin: 0 0 22px;
     }
 
     .contact {
-      background: var(--surface);
+      padding: 44px;
       border: 1px solid var(--border);
       border-radius: 18px;
-      padding: 44px;
+      background: var(--surface);
     }
 
     footer {
-      border-top: 1px solid var(--border);
-      padding: 25px 0;
-      color: var(--muted);
-      font-size: 12px;
       display: flex;
       justify-content: space-between;
       gap: 20px;
+      padding: 25px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
     }
 
     @media (max-width: 760px) {
@@ -467,6 +478,15 @@
 
       h1 {
         letter-spacing: -1.5px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+
+      .navlinks {
+        gap: 18px;
+        font-size: 13px;
       }
 
       .grid,
@@ -480,11 +500,6 @@
 
       section {
         padding: 52px 0;
-      }
-
-      .navlinks {
-        gap: 15px;
-        font-size: 13px;
       }
 
       .metrics {
@@ -514,41 +529,25 @@
         padding: 0 20px;
       }
 
-      nav {
-        flex-wrap: wrap;
-        gap: 14px;
-      }
-
-      .metrics,
-      .project-list {
+      .metrics {
         grid-template-columns: 1fr;
       }
 
-      .metric {
-        display: flex;
-        align-items: baseline;
-        gap: 15px;
-      }
-
       .metric strong {
-        min-width: 95px;
         font-size: 27px;
-      }
-
-      .metric p {
-        margin: 0;
       }
 
       .card-top {
         padding: 24px 23px 0;
       }
 
-      summary {
+      summary,
+      .case-body {
         padding-inline: 23px;
       }
 
-      .case-body {
-        padding-inline: 23px;
+      .perspective {
+        padding: 20px;
       }
 
       .tag {
@@ -578,7 +577,8 @@
       </a>
 
       <div class="navlinks">
-        <a href="#work">Work</a>
+        <a href="#work">B2C work</a>
+        <a href="#b2b">B2B experience</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
@@ -587,72 +587,72 @@
     <main id="main">
       <header class="hero">
         <div class="eyebrow">
-          Product Marketing · Fintech · Growth
+          Product Marketing · B2B &amp; B2C · Fintech
         </div>
 
         <h1>
-          Customer insight.<br>
-          Clear propositions.<br>
-          <span>Growth with purpose.</span>
+          Understand the customer.<br>
+          Define the value.<br>
+          <span>Build the path to growth.</span>
         </h1>
 
         <p class="intro">
           Hi, I'm Lohit — a product marketing and growth leader with
-          9+ years across fintech and technology. I turn customer needs
-          into compelling offers, coordinated launches, and experiments
-          that guide where a business invests next.
+          9+ years across fintech and technology. My experience spans
+          consumer growth at Remitly, banking partnerships at ZestMoney,
+          and lending technology adoption at Artoo. I connect customer
+          needs, product value, and go-to-market execution to help
+          businesses grow.
         </p>
 
         <div class="actions">
           <a class="btn" href="#work">Explore my work ↓</a>
-          <a class="btn secondary" href="#contact">Let's connect</a>
+          <a class="btn secondary" href="#b2b">View B2B experience</a>
         </div>
       </header>
 
       <div class="metrics" aria-label="Experience at a glance">
         <div class="metric">
-          <strong>9+</strong>
-          <p>Years across fintech and technology</p>
+          <strong>9+ years</strong>
+          <p>Across fintech, lending, payments, and technology</p>
         </div>
 
         <div class="metric">
-          <strong>20+</strong>
-          <p>Global markets supported</p>
+          <strong>B2B &amp; B2C</strong>
+          <p>Banking partners, business users, and consumers</p>
         </div>
 
         <div class="metric">
           <strong>End-to-end</strong>
-          <p>Strategy, launch, and measurement</p>
+          <p>Customer insight, GTM, adoption, and measurement</p>
         </div>
       </div>
 
+      <!-- B2C / REMITLY -->
       <section id="work" aria-labelledby="work-title">
-        <div class="eyebrow">Selected work / Remitly</div>
+        <div class="eyebrow">Consumer growth &amp; product marketing / Remitly</div>
 
         <h2 id="work-title">
-          From the customer problem<br>
-          to the business decision.
+          Turning customer value<br>
+          into acquisition and repeat usage.
         </h2>
 
         <p class="subtitle">
-          Six projects spanning go-to-market strategy, customer growth,
-          product experiences, and AI. Each highlights my contribution,
-          the decisions behind the work, and what it enabled.
+          Selected work across consumer propositions, global launches,
+          experimentation, personalization, and product experiences.
+          Each project highlights my contribution and the decisions
+          behind the work.
         </p>
 
         <div class="grid">
-          <!-- PROJECT 1: CANADA TRIPLE WIN -->
           <article class="card">
             <div class="card-top">
               <div class="card-meta">
                 <span class="tag">01 / Go-to-market strategy</span>
-                <span class="year">2026</span>
+                <span class="label">B2C · Remitly</span>
               </div>
 
-              <h3>
-                Canada Triple Win:<br>
-                One market. A clearer offer.
-              </h3>
+              <h3>Canada Triple Win:<br>One market. A clearer offer.</h3>
 
               <p>
                 Helped bring a country-wide acquisition proposition
@@ -660,10 +660,7 @@
                 three transfers, with corridor-specific exceptions.
               </p>
 
-              <div
-                class="visual"
-                aria-label="Campaign proposition: three FX boosts and three fee waivers, subject to eligibility"
-              >
+              <div class="visual" aria-label="Three FX boosts and three fee waivers">
                 <div class="offer">
                   <b>3×</b>
                   <small>FX boosts</small>
@@ -694,19 +691,19 @@
                   and product capabilities.
                 </p>
 
-                <h4>What I owned</h4>
+                <h4>My contribution</h4>
                 <p>
                   Coordinated the promotion workstream across regional
                   Marketing, Finance, Analytics, Product, and Lifecycle.
-                  Brought corridor-level offer details, cost inputs,
-                  approvals, and launch dependencies into a shared plan.
+                  Brought offer details, cost inputs, approvals, and
+                  launch dependencies into a shared plan.
                 </p>
 
                 <h4>A key decision</h4>
                 <p>
-                  Used a common proposition with explicit exceptions,
-                  and worked with partners on phased merchandising so
-                  the launch could progress while richer product
+                  Used a common proposition with explicit exceptions.
+                  Worked with partners on phased merchandising so the
+                  campaign could progress while richer product
                   experiences were developed.
                 </p>
 
@@ -714,25 +711,21 @@
                 <p>
                   A coordinated campaign launch and a defined path for
                   explaining serial benefits throughout the customer
-                  journey. Measurement focuses on acquisition,
-                  subsequent transfers, and promotional cost.
+                  journey, with acquisition, subsequent transfers,
+                  and promotional cost as measurement priorities.
                 </p>
               </div>
             </details>
           </article>
 
-          <!-- PROJECT 2: GLOBAL CHINA -->
           <article class="card">
             <div class="card-top">
               <div class="card-meta">
                 <span class="tag">02 / Segment strategy</span>
-                <span class="year">2026</span>
+                <span class="label">B2C · Remitly</span>
               </div>
 
-              <h3>
-                Global China:<br>
-                A proposition built for a segment.
-              </h3>
+              <h3>Global China:<br>A proposition built for a segment.</h3>
 
               <p>
                 Developed and coordinated a serial promotion for
@@ -740,10 +733,7 @@
                 regional needs, channel messaging, and the next transfer.
               </p>
 
-              <div
-                class="visual concepts"
-                aria-label="Campaign focus areas"
-              >
+              <div class="visual">
                 <span class="pill">Customer context</span>
                 <span class="pill">Serial value</span>
                 <span class="pill">Channel alignment</span>
@@ -761,12 +751,12 @@
               <div class="case-body">
                 <h4>The challenge</h4>
                 <p>
-                  Build a relevant offer across multiple sending markets
-                  while keeping promotion mechanics and customer-facing
+                  Build a relevant offer across sending markets while
+                  keeping promotion mechanics and customer-facing
                   messaging aligned.
                 </p>
 
-                <h4>What I owned</h4>
+                <h4>My contribution</h4>
                 <p>
                   Worked with Analytics and regional partners on the
                   offer and test structure. Coordinated approvals,
@@ -776,46 +766,37 @@
 
                 <h4>A key decision</h4>
                 <p>
-                  Extended promotional value beyond the first transfer
-                  through two serial FX boosts. Partnered on
-                  market-specific execution rather than assuming every
-                  channel or corridor could use the same setup.
+                  Extended value beyond the first transfer through
+                  two serial FX boosts, with market-specific execution
+                  reflecting channel and corridor requirements.
                 </p>
 
                 <h4>What it enabled</h4>
                 <p>
-                  A launched serial campaign with coordinated promotion
-                  and channel requirements, plus a foundation for
-                  evaluating acquisition, repeat usage, and partner-offer
-                  interactions.
+                  A launched serial campaign with coordinated offer
+                  and channel requirements, creating a foundation for
+                  evaluating acquisition and repeat usage.
                 </p>
               </div>
             </details>
           </article>
 
-          <!-- PROJECT 3: EXPERIMENTATION -->
           <article class="card">
             <div class="card-top">
               <div class="card-meta">
                 <span class="tag">03 / Growth experimentation</span>
-                <span class="year">2024–26</span>
+                <span class="label">B2C · Remitly</span>
               </div>
 
-              <h3>
-                Beyond discounts:<br>
-                Where should we invest?
-              </h3>
+              <h3>Beyond discounts:<br>Where should we invest?</h3>
 
               <p>
                 Helped turn promotion spending into a structured learning
-                agenda: test FX richness, fee waivers, and no-promo
+                agenda, testing FX richness, fee waivers, and no-promo
                 alternatives to guide acquisition investment.
               </p>
 
-              <div
-                class="visual concepts"
-                aria-label="Promotion approaches explored"
-              >
+              <div class="visual">
                 <span class="pill">FX boost</span>
                 <span class="pill">Fee waiver</span>
                 <span class="pill">No promotion</span>
@@ -833,61 +814,52 @@
               <div class="case-body">
                 <h4>The challenge</h4>
                 <p>
-                  Understand when an incentive creates incremental value
-                  and when the business can reduce spending without
-                  undermining acquisition or retention.
+                  Understand when an incentive creates incremental
+                  customer value and when spending can be reduced
+                  without undermining acquisition or retention.
                 </p>
 
-                <h4>What I owned</h4>
+                <h4>My contribution</h4>
                 <p>
-                  Built and coordinated testing plans with Marketing
-                  Analytics, regional teams, Legal, and channel owners.
-                  Led planning for FX-removal and no-promo tests, and
-                  helped operationalize A/B testing and reusable learnings.
+                  Coordinated testing plans with Marketing Analytics,
+                  regional teams, Legal, and channel owners. Led
+                  planning for FX-removal and no-promo tests and
+                  helped operationalize experiments and shared learnings.
                 </p>
 
                 <h4>A key decision</h4>
                 <p>
-                  Matched the execution approach to available capabilities,
-                  using both pre/post studies and controlled experiments.
-                  Established guardrails, advertising-change dependencies,
-                  and coordination with Pricing tests.
+                  Matched study designs to available capabilities,
+                  distinguishing pre/post observations from controlled
+                  experiments and coordinating guardrails with Pricing.
                 </p>
 
                 <h4>What it enabled</h4>
                 <p>
-                  A repeatable approach to evaluating offer changes and
-                  informing scale, reduction, or reversion decisions
-                  using acquisition, cost, retention, and customer-value
-                  measures.
+                  A repeatable approach to offer decisions using
+                  acquisition, cost, retention, and customer-value
+                  measures to inform scaling, reduction, or reversion.
                 </p>
               </div>
             </details>
           </article>
 
-          <!-- PROJECT 4: ML PERSONALIZATION -->
           <article class="card">
             <div class="card-top">
               <div class="card-meta">
                 <span class="tag">04 / AI &amp; personalization</span>
-                <span class="year">2026</span>
+                <span class="label">B2C · Remitly</span>
               </div>
 
-              <h3>
-                From blanket offers<br>
-                to ML-guided decisions.
-              </h3>
+              <h3>From blanket offers<br>to ML-guided decisions.</h3>
 
               <p>
                 Translated a personalization ambition into business
                 requirements, a shared roadmap, and validation plans
-                for more targeted second-transfer incentives.
+                for targeted second-transfer incentives.
               </p>
 
-              <div
-                class="visual concepts"
-                aria-label="Personalization work areas"
-              >
+              <div class="visual">
                 <span class="pill">Segmentation</span>
                 <span class="pill">Offer targeting</span>
                 <span class="pill">Validation</span>
@@ -905,64 +877,52 @@
               <div class="case-body">
                 <h4>The challenge</h4>
                 <p>
-                  Move toward offering the right incentive to the right
-                  customer, while preserving a credible way to measure
-                  incremental retention and economics.
+                  Move toward more relevant incentives while preserving
+                  a credible way to measure incremental retention
+                  and offer economics.
                 </p>
 
-                <h4>What I owned</h4>
+                <h4>My contribution</h4>
                 <p>
-                  Consolidated ML promotion initiatives into a portfolio
-                  tracker, established a recurring operating cadence,
-                  clarified responsibilities, and coordinated business
-                  requirements with Data Science, Analytics, Product,
-                  and Engineering.
+                  Consolidated initiatives into a portfolio tracker,
+                  established an operating cadence, clarified
+                  responsibilities, and coordinated requirements with
+                  Data Science, Analytics, Product, and Engineering.
                 </p>
 
                 <h4>A key decision</h4>
                 <p>
                   Separated model development, data readiness, platform
                   dependencies, and customer testing into explicit
-                  workstreams. Helped shape STT segmentation and
-                  score-validation plans instead of treating a model
-                  score as proof of customer impact.
+                  workstreams, with validation before impact claims.
                 </p>
 
                 <h4>Progress</h4>
                 <p>
                   Established the program structure and requirements,
                   with targeting validation and test planning continuing.
-                  <span class="status">
-                    Ongoing development and validation.
-                  </span>
+                  <span class="status">Ongoing development and validation.</span>
                 </p>
               </div>
             </details>
           </article>
 
-          <!-- PROJECT 5: PRODUCT MERCHANDISING -->
           <article class="card">
             <div class="card-top">
               <div class="card-meta">
                 <span class="tag">05 / Product experience</span>
-                <span class="year">2026</span>
+                <span class="label">B2C · Remitly</span>
               </div>
 
-              <h3>
-                Making promotional value<br>
-                clear at every step.
-              </h3>
+              <h3>Making promotional value<br>clear at every step.</h3>
 
               <p>
-                Co-authored the Canada serial merchandising requirements
-                so customers could understand the current offer,
-                remaining benefits, and eligibility across their journey.
+                Co-authored Canada serial merchandising requirements
+                to help customers understand their current offer,
+                remaining benefits, and eligibility.
               </p>
 
-              <div
-                class="visual concepts"
-                aria-label="Questions the proposed experience addresses"
-              >
+              <div class="visual">
                 <span class="pill">What do I get?</span>
                 <span class="pill">What remains?</span>
                 <span class="pill">When does it expire?</span>
@@ -980,62 +940,53 @@
               <div class="case-body">
                 <h4>The challenge</h4>
                 <p>
-                  An acquisition campaign can promise multiple benefits,
-                  but the product experience must explain which benefit
-                  applies now and which remain available.
+                  Help customers understand which promotional benefit
+                  applies to their current transfer and which benefits
+                  remain available.
                 </p>
 
-                <h4>What I owned</h4>
+                <h4>My contribution</h4>
                 <p>
-                  Co-authored the BRD covering onboarding, home-screen
+                  Co-authored requirements across onboarding, home-screen
                   messaging, the calculator, send summary, and proposed
                   benefit tracking. Defined needs for redemption status,
-                  expiry, transfer number, and currency-specific eligibility.
+                  expiry, transfer number, and currency eligibility.
                 </p>
 
                 <h4>A key decision</h4>
                 <p>
-                  Distinguished initial banner support from richer widgets
-                  and trackers. Accounted for dual-currency corridors so
-                  customers would see FX messaging only where the benefit
-                  applied.
+                  Distinguished initial banner support from richer
+                  widgets and trackers, while accounting for corridors
+                  where FX benefits depend on the receive currency.
                 </p>
 
                 <h4>What it enabled</h4>
                 <p>
                   A shared specification and phased delivery approach,
-                  with acquisition conversion as the primary measurement
-                  focus and repeat-transfer behavior as a supporting
-                  outcome. Richer surfaces were specified for subsequent
-                  development.
+                  with conversion and repeat-transfer behavior as
+                  measurement priorities. Richer surfaces were specified
+                  for subsequent development.
                 </p>
               </div>
             </details>
           </article>
 
-          <!-- PROJECT 6: AI AND AUTOMATION -->
           <article class="card">
             <div class="card-top">
               <div class="card-meta">
                 <span class="tag">06 / AI &amp; operational scale</span>
-                <span class="year">2025–26</span>
+                <span class="label">Remitly</span>
               </div>
 
-              <h3>
-                Less repetition.<br>
-                More room for better launches.
-              </h3>
+              <h3>Less repetition.<br>More room for better launches.</h3>
 
               <p>
-                Built reusable promotion terms workflows and helped teams
-                adopt AI-assisted drafting, localization preparation, and
-                tooling to reduce repetitive launch work.
+                Built reusable promotion terms workflows and helped
+                teams adopt AI-assisted drafting, localization
+                preparation, and tools for recurring launch work.
               </p>
 
-              <div
-                class="visual concepts"
-                aria-label="Operational improvement areas"
-              >
+              <div class="visual">
                 <span class="pill">Reusable templates</span>
                 <span class="pill">AI-assisted preparation</span>
                 <span class="pill">Human review</span>
@@ -1053,140 +1004,260 @@
               <div class="case-body">
                 <h4>The challenge</h4>
                 <p>
-                  New offer combinations, countries, and languages created
-                  recurring document work and opportunities for
-                  inconsistency across launches.
+                  New offers, countries, and languages created recurring
+                  document work and opportunities for inconsistency.
                 </p>
 
-                <h4>What I owned</h4>
+                <h4>My contribution</h4>
                 <p>
-                  Worked with Legal, Lifecycle, and Engineering to develop
-                  a scalable T&amp;C toolkit and AI-assisted preparation
-                  workflows. Trained colleagues on the tools and publishing
-                  process, and contributed operational requirements for
-                  bulk promotion tooling.
+                  Worked with Legal, Lifecycle, and Engineering on a
+                  scalable terms toolkit and AI-assisted preparation.
+                  Trained colleagues on tools and publishing workflows,
+                  and contributed operational requirements for bulk tooling.
                 </p>
 
                 <h4>A key decision</h4>
                 <p>
-                  Standardized reusable content and applied AI to preparation,
-                  while keeping legal approval and launch validation as
-                  explicit human responsibilities.
+                  Standardized reusable content and applied AI to
+                  preparation while retaining explicit human ownership
+                  of legal approval and launch validation.
                 </p>
 
                 <h4>What it enabled</h4>
                 <p>
-                  Reusable workflows that reduced manual preparation and
-                  improved consistency. The work also informed further
-                  exploration of AI-assisted promotion creation and QA.
+                  Reusable preparation workflows and a foundation
+                  for further exploration of AI-assisted promotion
+                  creation and quality assurance.
+                </p>
+              </div>
+            </details>
+          </article>
+        </div>
+      </section>
+
+      <!-- B2B / INDIA EXPERIENCE -->
+      <section id="b2b" aria-labelledby="b2b-title">
+        <div class="eyebrow">B2B partnerships &amp; product adoption / India</div>
+
+        <h2 id="b2b-title">
+          Building business relationships.<br>
+          Bringing financial products into use.
+        </h2>
+
+        <p class="subtitle">
+          Before Remitly, I worked across banking partnerships and
+          lending technology in India. These experiences shaped how
+          I think about business buyers, partner value, and the work
+          required to turn a product agreement into adoption.
+        </p>
+
+        <div class="grid">
+          <article class="card b2b-card">
+            <div class="card-top">
+              <div class="card-meta">
+                <span class="tag">07 / Banking partnerships</span>
+                <span class="label">B2B2C · India</span>
+              </div>
+
+              <h3>ZestMoney:<br>Connecting banking partnerships to consumer access.</h3>
+
+              <p>
+                Led banking partnerships at a buy-now-pay-later fintech,
+                helping scale financial products to millions of consumers.
+                The work connected institutional relationships with
+                consumer product distribution.
+              </p>
+
+              <div class="visual">
+                <span class="pill">Banking partners</span>
+                <span class="pill">Consumer finance</span>
+                <span class="pill">Product scale</span>
+              </div>
+
+              <p class="role">
+                <span>My focus:</span>
+                Banking partnerships and scaling consumer financial products
+              </p>
+            </div>
+
+            <details>
+              <summary>Explore the ZestMoney experience</summary>
+
+              <div class="case-body">
+                <h4>The business context</h4>
+                <p>
+                  Consumer lending brings together two sets of needs:
+                  financial institutions need a compelling partnership,
+                  and consumers need an accessible, useful product.
+                </p>
+
+                <h4>My contribution</h4>
+                <p>
+                  Led banking partnerships and helped scale products
+                  to millions of consumers, working at the intersection
+                  of institutional relationships and consumer finance.
+                </p>
+
+                <h4>The B2B2C perspective</h4>
+                <p>
+                  This experience shaped my approach to connecting
+                  the partner proposition with the end-customer
+                  experience, and to evaluating growth through both
+                  business relationships and consumer adoption.
+                </p>
+              </div>
+            </details>
+          </article>
+
+          <article class="card b2b-card">
+            <div class="card-top">
+              <div class="card-meta">
+                <span class="tag">08 / Lending technology adoption</span>
+                <span class="label">B2B · India</span>
+              </div>
+
+              <h3>Artoo:<br>Turning lending technology into everyday adoption.</h3>
+
+              <p>
+                Drove lending technology adoption across hundreds
+                of branches, building experience in how business
+                software becomes part of distributed teams'
+                day-to-day work.
+              </p>
+
+              <div class="visual">
+                <span class="pill">Lending technology</span>
+                <span class="pill">Branch adoption</span>
+                <span class="pill">Business users</span>
+              </div>
+
+              <p class="role">
+                <span>My focus:</span>
+                Product adoption across distributed lending operations
+              </p>
+            </div>
+
+            <details>
+              <summary>Explore the Artoo experience</summary>
+
+              <div class="case-body">
+                <h4>The business context</h4>
+                <p>
+                  Lending technology must create value for the
+                  organization purchasing it and the branch teams
+                  using it in their daily workflows.
+                </p>
+
+                <h4>My contribution</h4>
+                <p>
+                  Drove adoption of lending technology across hundreds
+                  of branches, connecting a technology product with
+                  the realities of distributed business operations.
+                </p>
+
+                <h4>The B2B perspective</h4>
+                <p>
+                  This experience grounded my product marketing
+                  approach in practical adoption: understanding users'
+                  work, making product value clear, and considering
+                  what teams need to put a solution into use.
                 </p>
               </div>
             </details>
           </article>
         </div>
 
-        <div class="more-work">
-          <h3>Additional experience</h3>
-
-          <div class="project-list">
-            <div>
-              <h4>Mother's Day growth experiments</h4>
-              <p>
-                Seasonal offer planning, messaging, conversion experiments,
-                and FX cap testing.
-              </p>
-            </div>
-
-            <div>
-              <h4>WhatsApp promotion enablement</h4>
-              <p>
-                Worked through application timing and offer-override
-                constraints to support a new channel.
-              </p>
-            </div>
-
-            <div>
-              <h4>Employee Send &amp; CAPE</h4>
-              <p>
-                Benefit design, onboarding, internal communications,
-                and customer-experience missions.
-              </p>
-            </div>
-
-            <div>
-              <h4>Global promotions operating model</h4>
-              <p>
-                Intake, approvals, QA, training, and governance across
-                regional and functional teams.
-              </p>
-            </div>
-          </div>
+        <div class="perspective">
+          <h3>One perspective across B2B and B2C</h3>
+          <p>
+            At ZestMoney, I worked through banking partnerships to
+            reach consumers. At Artoo, I focused on technology adoption
+            within lending operations. At Remitly, I work on consumer
+            acquisition and early retention. Together, these experiences
+            help me connect the buyer, the user, and the business
+            outcome when shaping a go-to-market approach.
+          </p>
         </div>
       </section>
 
+      <!-- ABOUT -->
       <section id="about" aria-labelledby="about-title">
         <div class="eyebrow">About me</div>
 
         <h2 id="about-title">
-          Marketing thinking.<br>
-          Product mindset. Business impact.
+          Technical foundation.<br>
+          Commercial perspective. Customer focus.
         </h2>
 
         <div class="about-layout">
           <div>
             <p class="about">
-              My experience spans fintech, payments, lending, and technology.
-              I enjoy work that connects a real customer need with a clear
-              proposition and a practical path to market.
+              I started my career as a software engineer and earned
+              my MBA from Carnegie Mellon University's Tepper School
+              of Business. My work has since spanned banking
+              partnerships, lending technology, and consumer fintech.
             </p>
 
             <p class="about">
-              At Remitly, I lead promotion program work across acquisition,
-              experimentation, and early retention, partnering with Product,
-              Analytics, Engineering, Finance, Lifecycle, and regional teams.
+              Across ZestMoney, Artoo, and Remitly, I've worked on
+              different routes to growth: building partner relationships,
+              driving product adoption, launching consumer offers,
+              and developing experiments that guide investment.
             </p>
 
             <p class="about">
-              I bring structure to complex launches, ask what an experiment
-              should help us decide, and turn one-off solutions into
-              approaches that teams can use again.
+              Today, I bring that experience to product marketing
+              and growth: understanding the audience, defining the
+              proposition, aligning teams, and building a practical
+              path from strategy to adoption.
             </p>
           </div>
 
           <div class="approach">
-            <h3>Start with the customer</h3>
+            <h3>Understand the buyer and the user</h3>
             <p>
-              Understand the need, the context, and what makes the offer valuable.
+              Identify who makes the decision, who uses the product,
+              and what each needs to see value.
             </p>
 
-            <h3>Make the tradeoffs clear</h3>
+            <h3>Connect product value to business value</h3>
             <p>
-              Connect customer value with product constraints, commercial
-              priorities, and launch readiness.
+              Translate capabilities into relevant customer benefits
+              and a clear commercial proposition.
             </p>
 
-            <h3>Build learning into execution</h3>
+            <h3>Carry strategy through to adoption</h3>
             <p>
-              Define the decision and measurement approach before the
-              campaign goes live.
+              Align launch execution, partner readiness, customer
+              communication, and measurement.
+            </p>
+
+            <h3>Use evidence to guide the next decision</h3>
+            <p>
+              Bring customer economics, experimentation, and product
+              data into decisions about where to invest and improve.
             </p>
           </div>
         </div>
       </section>
 
+      <!-- CONTACT -->
       <section id="contact" aria-labelledby="contact-title">
         <div class="contact">
           <div class="eyebrow">Let's connect</div>
 
-          <h2 id="contact-title">Building the next stage of growth?</h2>
+          <h2 id="contact-title">
+            Building the next stage of growth?
+          </h2>
 
           <p class="subtitle">
-            I'm interested in product marketing, go-to-market strategy,
-            and growth leadership opportunities where customer
-            understanding shapes both the product and the business.
+            I'm interested in product marketing, go-to-market,
+            and growth leadership opportunities across B2B and B2C —
+            especially where financial products, technology, and
+            customer needs intersect.
           </p>
 
-          <!-- Add your email or LinkedIn URL here when ready. -->
+          <!-- Add your LinkedIn or email link here. -->
 
           <div class="actions">
             <a
@@ -1199,7 +1270,7 @@
             </a>
 
             <a class="btn secondary" href="#work">
-              View selected work ↑
+              Explore selected work ↑
             </a>
           </div>
         </div>
@@ -1208,7 +1279,7 @@
 
     <footer>
       <span>© 2026 Lohit Lingam · Built with GitHub Pages</span>
-      <span>Selected work · July 2024–October 2026</span>
+      <span>Product Marketing · B2B &amp; B2C · Fintech</span>
     </footer>
   </div>
 </body>
