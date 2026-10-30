@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lohit Lingam — Product Marketing, GTM, Fintech and Growth Portfolio">
+  <title>Lohit Lingam | Product Marketing Portfolio</title>
+  <style>
+    :root {
+      --bg: #0b1120;
+      --surface: #141f33;
+      --text: #f4f7fc;
+      --muted: #a4b1c6;
+      --blue: #8db8ff;
+      --border: #29364e;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1120px; margin: auto; padding: 0 28px; }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .logo { font-size: 19px; font-weight: 800; letter-spacing: -0.5px; }
+    .navlinks { display: flex; gap: 25px; color: var(--muted); font-size: 14px; }
+    .navlinks a:hover { color: var(--blue); }
+    .hero { padding: 110px 0 90px; }
+    .eyebrow {
+      color: var(--blue);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+    h1 {
+      max-width: 940px;
+      font-size: clamp(42px, 6vw, 78px);
+      line-height: 1.12;
+      letter-spacing: -3px;
+      margin: 23px 0;
+    }
+    h1 span { color: var(--blue); }
+    .intro { max-width: 690px; font-size: 19px; color: var(--muted); }
+    .actions { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 35px; }
+    .btn {
+      display: inline-block;
+      border-radius: 9px;
+      padding: 12px 22px;
+      background: var(--blue);
+      color: #081222;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .btn.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    section { padding: 65px 0; }
+    h2 { font-size: 36px; letter-spacing: -1px; margin: 10px 0 15px; }
+    .subtitle { color: var(--muted); max-width: 680px; }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 35px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .metric strong { font-size: 42px; display: block; line-height: 1.2; }
+    .metric p { color: var(--muted); font-size: 14px; margin: 8px 0; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 35px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 30px;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--blue); }
+    .tag {
+      display: inline-block;
+      color: var(--blue);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+    }
+    .card h3 { font-size: 24px; line-height: 1.3; margin: 20px 0 12px; }
+    .card p { color: var(--muted); font-size: 15px; }
+    .card .result { color: var(--text); font-weight: 700; margin-top: 25px; }
+    .about { max-width: 760px; color: var(--muted); font-size: 17px; }
+    .contact {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 45px;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    @media(max-width: 700px) {
+      .hero { padding: 70px 0; }
+      h1 { letter-spacing: -1.5px; }
+      .grid { grid-template-columns: 1fr; }
+      .metrics { grid-template-columns: 1fr; }
+      .navlinks { gap: 12px; font-size: 12px; }
+      .contact { padding: 25px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#">Lohit Lingam<span style="color:#8db8ff">.</span></a>
+      <div class="navlinks">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="eyebrow">Product Marketing · Fintech · Growth</div>
+      <h1>Turning customer insights into <span>strategies that drive growth.</span></h1>
+      <p class="intro">
+        Hi, I'm Lohit — a product marketing and growth leader with
+        9+ years of experience across fintech and technology.
+        I connect customer understanding, product strategy, and
+        go-to-market execution to create measurable business impact.
+      </p>
+      <div class="actions">
+        <a class="btn" href="#work">Explore My Work ↓</a>
+        <a class="btn secondary" href="#contact">Get in Touch</a>
+      </div>
+    </header>
+
+    <div class="metrics">
+      <div class="metric">
+        <strong>9+</strong>
+        <p>Years across fintech and technology</p>
+      </div>
+      <div class="metric">
+        <strong>20+</strong>
+        <p>Global markets supported</p>
+      </div>
+      <div class="metric">
+        <strong>End-to-end</strong>
+        <p>GTM strategy, execution & measurement</p>
+      </div>
+    </div>
+
+    <section id="work">
+      <div class="eyebrow">Selected Work</div>
+      <h2>Strategy meets execution.</h2>
+      <p class="subtitle">
+        Selected examples of how I've approached positioning,
+        go-to-market, lifecycle growth, and commercial enablement.
+      </p>
+
+      <div class="grid">
+        <article class="card">
+          <span class="tag">01 / Go-to-Market Strategy</span>
+          <h3>Taking a Growth Campaign Nationwide</h3>
+          <p>
+            Designed and led a Canada-wide customer acquisition
+            promotion, replacing fragmented corridor-level offers
+            with a consistent national proposition.
+          </p>
+          <p class="result">Remitly · Launch strategy & cross-functional execution</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">02 / Positioning & Messaging</span>
+          <h3>From Exchange Rates to Customer Outcomes</h3>
+          <p>
+            Reframed a China remittance campaign around
+            customer value rather than product mechanics,
+            with localized messaging and channel strategies.
+          </p>
+          <p class="result">Remitly · Customer insight & positioning</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">03 / AI & Lifecycle Marketing</span>
+          <h3>Smarter Incentives Through Personalization</h3>
+          <p>
+            Partnered with data science, analytics and product
+            teams on predictive targeting and experimentation
+            to improve incentive efficiency and retention.
+          </p>
+          <p class="result">Remitly · Personalization & experimentation</p>
+        </article>
+
+        <article class="card">
+          <span class="tag">04 / Partner Enablement</span>
+          <h3>Scaling a Partner Promotions Program</h3>
+          <p>
+            Standardized partner discount codes, eligibility,
+            governance and messaging to support more
+            consistent partner execution.
+          </p>
+          <p class="result">Remitly · Sales enablement & operations</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="eyebrow">About Me</div>
+      <h2>Marketing thinking. Product mindset. Business impact.</h2>
+      <p class="about">
+        My career spans fintech, payments, lending and technology,
+        where I've worked at the intersection of customer needs,
+        commercial strategy, product and growth.
+      </p>
+      <p class="about">
+        At Remitly, I work on global promotions, experimentation,
+        acquisition and early retention, partnering with Product,
+        Analytics, Engineering, Finance, Lifecycle and regional teams.
+      </p>
+    </section>
+
+    <section id="contact">
+      <div class="contact">
+        <div class="eyebrow">Let's Connect</div>
+        <h2>Interested in building what's next?</h2>
+        <p class="subtitle">
+          I'm interested in product marketing, GTM strategy,
+          and growth leadership opportunities.
+        </p>
+        <div class="actions">
+          <a class="btn" href="https://github.com/lohitlingam"
+             target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Lohit Lingam · Built with GitHub Pages
+    </footer>
+  </div>
+</body>
+</html>
