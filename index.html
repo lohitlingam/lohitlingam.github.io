@@ -7,7 +7,7 @@
     name="description"
     content="Lohit Lingam — Product marketing and growth across B2B and B2C fintech. Experience spanning consumer growth, banking partnerships, lending technology, and go-to-market strategy."
   >
-  <meta name="theme-color" content="#0b1120">
+  <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="Lohit Lingam | Product Marketing & Growth">
   <meta
     property="og:description"
@@ -19,14 +19,14 @@
 
   <style>
     :root {
-      --bg: #0b1120;
-      --surface: #141f33;
-      --surface-dark: #101a2b;
-      --text: #f4f7fc;
-      --muted: #a4b1c6;
-      --blue: #8db8ff;
-      --mint: #a0dccb;
-      --border: #29364e;
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --surface-dark: #f3f7fc;
+      --text: #14243b;
+      --muted: #526279;
+      --blue: #2557c4;
+      --mint: #087c70;
+      --border: #dce4ef;
     }
 
     * {
@@ -163,14 +163,14 @@
       border: 1px solid transparent;
       border-radius: 9px;
       background: var(--blue);
-      color: #081222;
+      color: #ffffff;
       font-size: 14px;
       font-weight: 700;
       transition: background 0.2s, border-color 0.2s;
     }
 
     .btn:hover {
-      background: #b0ceff;
+      background: #1c4398;
     }
 
     .btn.secondary {
@@ -231,7 +231,7 @@
 
     .card:hover,
     .card:focus-within {
-      border-color: #6087bf;
+      border-color: #91b0ee;
     }
 
     .card-top {
@@ -325,9 +325,9 @@
 
     .pill {
       padding: 8px 11px;
-      border: 1px solid #3d5578;
+      border: 1px solid #cbdaf4;
       border-radius: 6px;
-      color: #c9dcf9;
+      color: #254b91;
       font-size: 12px;
       text-align: center;
     }
@@ -401,8 +401,8 @@
     }
 
     .b2b-card .pill {
-      border-color: #355b58;
-      color: #c0e8dc;
+      border-color: #b7ded4;
+      color: #096c60;
     }
 
     .perspective {
@@ -563,6 +563,88 @@
       * {
         transition: none !important;
       }
+    }
+
+    /* Light theme: distinct accents for each area of work. */
+    :root { color-scheme: light; }
+
+    .hero {
+      background: radial-gradient(ellipse at 85% 15%, #edf4ff 0%, transparent 60%);
+    }
+
+    .metrics {
+      padding-inline: 24px;
+      background: #f7f9fd;
+      border-radius: 14px;
+    }
+
+    .card {
+      border-top: 3px solid var(--accent, var(--blue));
+      box-shadow: 0 5px 20px rgba(20, 36, 59, 0.045);
+    }
+
+    #work .card:nth-child(2) {
+      --accent: #7750b5;
+      --accent-bg: #f7f3fc;
+      --accent-border: #e0d4f0;
+    }
+
+    #work .card:nth-child(3) {
+      --accent: #a64b17;
+      --accent-bg: #fff6ed;
+      --accent-border: #f0d8c4;
+    }
+
+    #work .card:nth-child(4) {
+      --accent: #087c70;
+      --accent-bg: #effaf6;
+      --accent-border: #c5e6da;
+    }
+
+    #work .card:nth-child(5) {
+      --accent: #176d9a;
+      --accent-bg: #eef8fd;
+      --accent-border: #c8e1f0;
+    }
+
+    .card .tag,
+    .card summary {
+      color: var(--accent, var(--blue));
+    }
+
+    .card .visual {
+      background: var(--accent-bg, #f0f5ff);
+      border-color: var(--accent-border, #d2dff6);
+    }
+
+    .card .pill {
+      background: #ffffff;
+      color: var(--accent, var(--blue));
+      border-color: var(--accent-border, #cbdaf4);
+    }
+
+    .b2b-card {
+      --accent: #087c70;
+      --accent-bg: #effaf6;
+      --accent-border: #c5e6da;
+    }
+
+    .label {
+      background: #f7f9fc;
+    }
+
+    .perspective {
+      background: #effaf6;
+    }
+
+    .contact {
+      background: linear-gradient(120deg, #f0f5ff, #effaf6);
+      border-color: #d5e2ed;
+    }
+
+    ::selection {
+      background: #dce9ff;
+      color: #14243b;
     }
   </style>
 </head>
