@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta
     name="description"
-    content="Lohit Lingam — Product marketing and growth across B2B and B2C fintech. Experience spanning consumer growth, banking partnerships, lending technology, and go-to-market strategy."
+    content="Lohit Lingam — Product marketing and growth across B2B and B2C fintech. Selected work in product commercialization, positioning, go-to-market strategy, partnerships, and consumer growth."
   >
   <meta name="theme-color" content="#ffffff">
   <meta property="og:title" content="Lohit Lingam | Product Marketing & Growth">
   <meta
     property="og:description"
-    content="Connecting customer insight, product value, and go-to-market execution across B2B and B2C fintech."
+    content="Connecting customer needs with product strategy, commercialization, and growth across enterprise technology and consumer fintech."
   >
   <meta property="og:type" content="website">
 
@@ -19,14 +20,15 @@
 
   <style>
     :root {
+      color-scheme: light;
       --bg: #ffffff;
       --surface: #ffffff;
-      --surface-dark: #f3f7fc;
       --text: #14243b;
       --muted: #526279;
       --blue: #2557c4;
-      --mint: #087c70;
+      --teal: #087c70;
       --border: #dce4ef;
+      --soft: #f7f9fd;
     }
 
     * {
@@ -55,14 +57,20 @@
     a:focus-visible,
     summary:focus-visible {
       outline: 3px solid var(--blue);
-      outline-offset: 6px;
+      outline-offset: 5px;
       border-radius: 4px;
     }
 
+    ::selection {
+      background: #dce9ff;
+      color: var(--text);
+    }
+
     .container {
+      width: 100%;
       max-width: 1160px;
-      margin: auto;
-      padding: 0 28px;
+      margin-inline: auto;
+      padding-inline: 28px;
     }
 
     .skip {
@@ -72,7 +80,7 @@
       z-index: 10;
       padding: 10px 18px;
       background: var(--blue);
-      color: var(--bg);
+      color: #ffffff;
     }
 
     .skip:focus {
@@ -84,7 +92,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 20px;
-      padding: 25px 0;
+      padding-block: 25px;
       border-bottom: 1px solid var(--border);
     }
 
@@ -112,21 +120,27 @@
     }
 
     .hero {
-      padding: 100px 0 78px;
+      padding-block: 95px 75px;
+      background:
+        radial-gradient(
+          ellipse at 90% 15%,
+          #edf4ff 0%,
+          transparent 60%
+        );
     }
 
     .eyebrow {
       color: var(--blue);
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
     }
 
     h1 {
-      max-width: 980px;
+      max-width: 990px;
       margin: 23px 0;
-      font-size: clamp(42px, 6vw, 76px);
+      font-size: clamp(42px, 6vw, 74px);
       line-height: 1.12;
       letter-spacing: -3px;
     }
@@ -143,7 +157,7 @@
     }
 
     .intro {
-      max-width: 770px;
+      max-width: 790px;
       color: var(--muted);
       font-size: 19px;
     }
@@ -152,7 +166,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 15px;
-      margin-top: 32px;
+      margin-top: 30px;
     }
 
     .btn {
@@ -175,25 +189,28 @@
 
     .btn.secondary {
       border-color: var(--border);
-      background: transparent;
+      background: #ffffff;
       color: var(--text);
     }
 
     .btn.secondary:hover {
       border-color: var(--blue);
+      background: #f7faff;
     }
 
     .metrics {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 30px;
-      padding: 30px 0;
-      border-block: 1px solid var(--border);
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--soft);
     }
 
     .metric strong {
       display: block;
-      font-size: 35px;
+      font-size: 32px;
       line-height: 1.2;
       letter-spacing: -1px;
     }
@@ -205,11 +222,11 @@
     }
 
     section {
-      padding: 70px 0;
+      padding-block: 70px;
     }
 
     .subtitle {
-      max-width: 760px;
+      max-width: 780px;
       color: var(--muted);
     }
 
@@ -222,16 +239,48 @@
     }
 
     .card {
+      --accent: #2557c4;
+      --accent-bg: #f0f5ff;
+      --accent-border: #cbdaf4;
+
+      min-width: 0;
       overflow: hidden;
       border: 1px solid var(--border);
+      border-top: 3px solid var(--accent);
       border-radius: 16px;
       background: var(--surface);
-      transition: border-color 0.2s;
+      box-shadow: 0 5px 20px rgba(20, 36, 59, 0.045);
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
 
     .card:hover,
     .card:focus-within {
-      border-color: #91b0ee;
+      border-color: var(--accent);
+      box-shadow: 0 8px 25px rgba(20, 36, 59, 0.075);
+    }
+
+    .card.purple {
+      --accent: #7750b5;
+      --accent-bg: #f7f3fc;
+      --accent-border: #e0d4f0;
+    }
+
+    .card.orange {
+      --accent: #a64b17;
+      --accent-bg: #fff6ed;
+      --accent-border: #f0d8c4;
+    }
+
+    .card.teal {
+      --accent: #087c70;
+      --accent-bg: #effaf6;
+      --accent-border: #c5e6da;
+    }
+
+    .card.sky {
+      --accent: #176d9a;
+      --accent-bg: #eef8fd;
+      --accent-border: #c8e1f0;
     }
 
     .card-top {
@@ -247,10 +296,10 @@
     }
 
     .tag {
-      color: var(--blue);
+      color: var(--accent);
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 1.3px;
+      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
@@ -258,6 +307,7 @@
       padding: 3px 9px;
       border: 1px solid var(--border);
       border-radius: 100px;
+      background: #f7f9fc;
       color: var(--muted);
       font-size: 11px;
     }
@@ -281,7 +331,7 @@
     }
 
     .role span {
-      color: var(--muted);
+      font-weight: 700;
     }
 
     .visual {
@@ -289,45 +339,21 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 9px;
       min-height: 100px;
       margin: 22px 0;
       padding: 18px;
-      border: 1px solid var(--border);
+      border: 1px solid var(--accent-border);
       border-radius: 10px;
-      background: var(--surface-dark);
-    }
-
-    .offer {
-      flex: 1;
-      text-align: center;
-    }
-
-    .offer b {
-      display: block;
-      color: var(--blue);
-      font-size: 30px;
-      line-height: 1.2;
-    }
-
-    .offer small {
-      display: block;
-      margin-top: 5px;
-      color: var(--muted);
-      font-size: 11px;
-    }
-
-    .divider {
-      width: 1px;
-      height: 42px;
-      background: var(--border);
+      background: var(--accent-bg);
     }
 
     .pill {
       padding: 8px 11px;
-      border: 1px solid #cbdaf4;
+      border: 1px solid var(--accent-border);
       border-radius: 6px;
-      color: #254b91;
+      background: #ffffff;
+      color: var(--accent);
       font-size: 12px;
       text-align: center;
     }
@@ -342,7 +368,7 @@
       justify-content: space-between;
       gap: 15px;
       padding: 18px 30px;
-      color: var(--blue);
+      color: var(--accent);
       font-size: 13px;
       font-weight: 700;
       cursor: pointer;
@@ -355,6 +381,7 @@
 
     summary::after {
       content: "+";
+      flex-shrink: 0;
       font-size: 21px;
       font-weight: 400;
       line-height: 1;
@@ -383,8 +410,8 @@
       font-size: 14px;
     }
 
-    .status {
-      color: var(--mint);
+    .case-body p + p {
+      margin-top: 12px;
     }
 
     #b2b,
@@ -392,25 +419,16 @@
       border-top: 1px solid var(--border);
     }
 
-    .b2b-card .tag {
-      color: var(--mint);
-    }
-
-    .b2b-card .visual {
-      justify-content: flex-start;
-    }
-
-    .b2b-card .pill {
-      border-color: #b7ded4;
-      color: #096c60;
+    #b2b > .eyebrow {
+      color: var(--teal);
     }
 
     .perspective {
       margin-top: 28px;
       padding: 24px 28px;
-      border-left: 3px solid var(--mint);
+      border-left: 3px solid var(--teal);
       border-radius: 0 10px 10px 0;
-      background: var(--surface-dark);
+      background: #effaf6;
     }
 
     .perspective h3 {
@@ -419,7 +437,6 @@
     }
 
     .perspective p {
-      max-width: 900px;
       margin: 0;
       color: var(--muted);
       font-size: 15px;
@@ -428,7 +445,7 @@
     .about-layout {
       display: grid;
       grid-template-columns: 1.25fr 1fr;
-      gap: 65px;
+      gap: 60px;
       margin-top: 25px;
     }
 
@@ -456,30 +473,23 @@
 
     .contact {
       padding: 44px;
-      border: 1px solid var(--border);
+      border: 1px solid #d5e2ed;
       border-radius: 18px;
-      background: var(--surface);
+      background: linear-gradient(120deg, #f0f5ff, #effaf6);
     }
 
     footer {
       display: flex;
       justify-content: space-between;
-      gap: 20px;
-      padding: 25px 0;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding-block: 25px;
       border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: 12px;
     }
 
     @media (max-width: 760px) {
-      .hero {
-        padding: 65px 0 55px;
-      }
-
-      h1 {
-        letter-spacing: -1.5px;
-      }
-
       nav {
         flex-wrap: wrap;
       }
@@ -487,6 +497,14 @@
       .navlinks {
         gap: 18px;
         font-size: 13px;
+      }
+
+      .hero {
+        padding-block: 60px 50px;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
       }
 
       .grid,
@@ -499,15 +517,16 @@
       }
 
       section {
-        padding: 52px 0;
+        padding-block: 50px;
       }
 
       .metrics {
         gap: 18px;
+        padding: 22px;
       }
 
       .metric strong {
-        font-size: 28px;
+        font-size: 25px;
       }
 
       .metric p {
@@ -517,24 +536,16 @@
       .contact {
         padding: 28px;
       }
-
-      footer {
-        flex-direction: column;
-        gap: 5px;
-      }
     }
 
     @media (max-width: 430px) {
       .container {
-        padding: 0 20px;
+        padding-inline: 20px;
       }
 
       .metrics {
         grid-template-columns: 1fr;
-      }
-
-      .metric strong {
-        font-size: 27px;
+        gap: 22px;
       }
 
       .card-top {
@@ -553,6 +564,11 @@
       .tag {
         font-size: 10px;
       }
+
+      footer {
+        flex-direction: column;
+        gap: 5px;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -563,88 +579,6 @@
       * {
         transition: none !important;
       }
-    }
-
-    /* Light theme: distinct accents for each area of work. */
-    :root { color-scheme: light; }
-
-    .hero {
-      background: radial-gradient(ellipse at 85% 15%, #edf4ff 0%, transparent 60%);
-    }
-
-    .metrics {
-      padding-inline: 24px;
-      background: #f7f9fd;
-      border-radius: 14px;
-    }
-
-    .card {
-      border-top: 3px solid var(--accent, var(--blue));
-      box-shadow: 0 5px 20px rgba(20, 36, 59, 0.045);
-    }
-
-    #work .card:nth-child(2) {
-      --accent: #7750b5;
-      --accent-bg: #f7f3fc;
-      --accent-border: #e0d4f0;
-    }
-
-    #work .card:nth-child(3) {
-      --accent: #a64b17;
-      --accent-bg: #fff6ed;
-      --accent-border: #f0d8c4;
-    }
-
-    #work .card:nth-child(4) {
-      --accent: #087c70;
-      --accent-bg: #effaf6;
-      --accent-border: #c5e6da;
-    }
-
-    #work .card:nth-child(5) {
-      --accent: #176d9a;
-      --accent-bg: #eef8fd;
-      --accent-border: #c8e1f0;
-    }
-
-    .card .tag,
-    .card summary {
-      color: var(--accent, var(--blue));
-    }
-
-    .card .visual {
-      background: var(--accent-bg, #f0f5ff);
-      border-color: var(--accent-border, #d2dff6);
-    }
-
-    .card .pill {
-      background: #ffffff;
-      color: var(--accent, var(--blue));
-      border-color: var(--accent-border, #cbdaf4);
-    }
-
-    .b2b-card {
-      --accent: #087c70;
-      --accent-bg: #effaf6;
-      --accent-border: #c5e6da;
-    }
-
-    .label {
-      background: #f7f9fc;
-    }
-
-    .perspective {
-      background: #effaf6;
-    }
-
-    .contact {
-      background: linear-gradient(120deg, #f0f5ff, #effaf6);
-      border-color: #d5e2ed;
-    }
-
-    ::selection {
-      background: #dce9ff;
-      color: #14243b;
     }
   </style>
 </head>
@@ -659,17 +593,19 @@
       </a>
 
       <div class="navlinks">
-        <a href="#work">B2C work</a>
-        <a href="#b2b">B2B experience</a>
+        <a href="#work">Remitly</a>
+        <a href="#b2b">B2B &amp; Product</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
 
     <main id="main">
+
+      <!-- HERO -->
       <header class="hero">
         <div class="eyebrow">
-          Product Marketing · B2B &amp; B2C · Fintech
+          Product Marketing · Product Strategy · Growth
         </div>
 
         <h1>
@@ -679,17 +615,24 @@
         </h1>
 
         <p class="intro">
-          Hi, I'm Lohit Lingam — a product marketing and growth leader with
-          9+ years across fintech and technology. My experience spans
-          consumer growth at Remitly, banking partnerships at ZestMoney,
-          and lending technology adoption at Artoo. I connect customer
-          needs, product value, and go-to-market execution to help
-          businesses grow.
+          Hi, I'm Lohit — a product marketing and growth leader with
+          9+ years across fintech and technology. I connect customer
+          needs with product strategy, commercialization, and
+          growth—across enterprise financial technology and
+          consumer fintech.
+        </p>
+
+        <p class="intro">
+          My experience spans consumer growth at Remitly,
+          product commercialization and banking partnerships at
+          ZestMoney, and lending technology adoption at Artoo.
         </p>
 
         <div class="actions">
           <a class="btn" href="#work">Explore my work ↓</a>
-          <a class="btn secondary" href="#b2b">View B2B experience</a>
+          <a class="btn secondary" href="#b2b">
+            B2B &amp; product experience
+          </a>
         </div>
       </header>
 
@@ -701,543 +644,571 @@
 
         <div class="metric">
           <strong>B2B &amp; B2C</strong>
-          <p>Banking partners, business users, and consumers</p>
+          <p>Business buyers, banking partners, and consumers</p>
         </div>
 
         <div class="metric">
           <strong>End-to-end</strong>
-          <p>Customer insight, GTM, adoption, and measurement</p>
+          <p>Customer insight, commercialization, GTM, and adoption</p>
         </div>
       </div>
 
-     <!-- REMITLY EXPERIENCE -->
-<section id="work" aria-labelledby="work-title">
-  <div class="eyebrow">
-    Consumer growth &amp; product marketing / Remitly
-  </div>
-
-  <h2 id="work-title">
-    Customer insights.<br>
-    Compelling propositions. Global growth.
-  </h2>
-
-  <p class="subtitle">
-    Selected work across acquisition strategy, customer messaging,
-    regional campaigns, personalization, and conversational AI.
-    From shaping the proposition to bringing it to market,
-    I connect customer understanding with product experiences
-    and measurable business outcomes.
-  </p>
-
-  <div class="grid">
-
-<!-- 01: CANADA -->
-<article class="card">
-  <div class="card-top">
-    <div class="card-meta">
-      <span class="tag">01 / Positioning &amp; go-to-market</span>
-      <span class="label">B2C · Remitly</span>
-    </div>
-
-    <h3>
-      Canada:<br>
-      Building customer preference in a competitive market.
-    </h3>
-
-    <p>
-      Helped shape a Canada-wide go-to-market strategy connecting
-      customer needs, competitive positioning, and clear messaging.
-      Worked across Marketing and Product to give customers a
-      compelling reason to choose Remitly and reinforce that value
-      throughout their journey.
-    </p>
-
-    <div class="visual">
-      <span class="pill">Audience insights</span>
-      <span class="pill">Positioning</span>
-      <span class="pill">Go-to-market strategy</span>
-    </div>
-
-    <p class="role">
-      <span>My role:</span>
-      Customer value proposition, messaging, product merchandising,
-      and launch strategy.
-    </p>
-  </div>
-
-  <details>
-    <summary>Explore the Canada strategy</summary>
-
-    <div class="case-body">
-      <h4>The challenge</h4>
-      <p>
-        Earn customer preference in a competitive market where
-        customers were balancing tighter household budgets with
-        their commitment to supporting family abroad. Strengthen
-        Remitly’s appeal in established markets while reaching
-        a broader mix of customers across Canada.
-      </p>
-
-      <h4>The audience strategy</h4>
-      <p>
-        Worked with regional partners to understand differences
-        across customer communities and sending destinations.
-        Considered how sending frequency, sensitivity to cost,
-        and confidence in switching providers could influence
-        the acquisition approach.
-      </p>
-
-      <p style="margin-top: 12px;">
-        The strategic question: what would give each audience
-        a meaningful reason to choose Remitly and continue
-        using it beyond their first transfer?
-      </p>
-
-      <h4>What I owned</h4>
-      <p>
-        Led the promotional strategy and launch workstream across
-        Marketing, Product, Finance, Analytics, and Lifecycle.
-        Helped translate the offer into a clear customer value
-        proposition and messaging, and shaped merchandising
-        placements to support discovery, conversion, and
-        repeat transfers.
-      </p>
-
-      <h4>A key decision</h4>
-      <p>
-        Build a common Canada-wide proposition around better
-        exchange rates and transfer fee savings across the first
-        three transfers, with adaptations for specific markets.
-        Communicate value beyond the first transaction and
-        reinforce it through messaging and product placements,
-        using a phased rollout as new experiences became available.
-      </p>
-
-      <h4>What it enabled</h4>
-      <p>
-        A coordinated Canada-wide launch connecting audience
-        needs, positioning, customer messaging, and the product
-        experience. Measurement focused on new customer
-        acquisition, repeat transfers, and acquisition cost.
-      </p>
-    </div>
-  </details>
-</article>
-
-    <!-- 02: CHINA -->
-    <article class="card">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="tag">02 / Audience &amp; positioning</span>
-          <span class="label">B2C · Remitly</span>
+      <!-- REMITLY -->
+      <section id="work" aria-labelledby="work-title">
+        <div class="eyebrow">
+          Consumer growth &amp; product marketing / Remitly
         </div>
 
-        <h3>
-          Global China:<br>
-          A new approach to winning customers.
-        </h3>
-
-        <p>
-          Used audience research to shape an acquisition strategy
-          for customers sending money to China—a segment where
-          growth had been challenging. Connected a compelling
-          offer with tailored messaging across paid media,
-          Chinese community channels, and the product experience.
-        </p>
-
-        <div class="visual">
-          <span class="pill">Audience insights</span>
-          <span class="pill">Value proposition</span>
-          <span class="pill">Multichannel strategy</span>
-        </div>
-
-        <p class="role">
-          <span>My role:</span>
-          Audience research, offer positioning, channel messaging
-          strategy, and product merchandising.
-        </p>
-      </div>
-
-      <details>
-        <summary>Explore the China campaign</summary>
-
-        <div class="case-body">
-          <h4>The challenge</h4>
-          <p>
-            Give customers sending money to China a stronger reason
-            to choose Remitly and keep using it. The opportunity
-            was to communicate value beyond an introductory offer,
-            reaching customers through relevant channels and
-            reinforcing that value throughout their journey.
-          </p>
-
-          <h4>What I owned</h4>
-          <p>
-            Researched the audience and drew on customer, community,
-            and competitor insights to help shape the offer and
-            messaging strategy. Partnered with regional marketing
-            and channel leads to translate the proposition into
-            English and Chinese communications across paid media,
-            landing pages, lifecycle messaging, WeChat, Rednote,
-            influencers, and community events.
-          </p>
-
-          <p style="margin-top: 12px;">
-            Helped shape new product merchandising to make the
-            offer visible at key conversion moments and connect
-            the acquisition message with the experience customers
-            encountered after signing up.
-          </p>
-
-          <h4>A key decision</h4>
-          <p>
-            Communicate savings across the first two transfers
-            upfront, rather than revealing the next benefit later.
-            The hypothesis: showing customers more of the value
-            available could reduce uncertainty about future pricing,
-            strengthen their reason to sign up, and encourage a
-            second transfer.
-          </p>
-
-          <h4>What it enabled</h4>
-          <p>
-            A launched campaign connecting audience insights,
-            channel messaging, and product merchandising across
-            multiple markets. Established a test of whether
-            communicating future value upfront could improve
-            acquisition, repeat usage, and customer profitability.
-          </p>
-        </div>
-      </details>
-    </article>
-
-    <!-- 03: REGIONAL AND PARTNER CAMPAIGNS -->
-    <article class="card">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="tag">03 / Regional &amp; partner marketing</span>
-          <span class="label">B2C · Remitly</span>
-        </div>
-
-        <h3>
-          Global reach.<br>
-          Locally relevant campaigns.
-        </h3>
-
-        <p>
-          Launched campaigns across Asia Pacific, Latin America,
-          North America, Europe, the Middle East, and Africa—adapting
-          offers, messaging, and launch timing to local customer
-          needs. Combined seasonal campaigns, partner collaborations,
-          and experimentation to understand what resonates in
-          each market.
-        </p>
-
-        <div class="visual">
-          <span class="pill">Market insights</span>
-          <span class="pill">Localized campaigns</span>
-          <span class="pill">Partner marketing</span>
-        </div>
-
-        <p class="role">
-          <span>My role:</span>
-          Regional go-to-market strategy, offer positioning,
-          seasonal launches, co-marketing, and experimentation.
-        </p>
-      </div>
-
-      <details>
-        <summary>Explore regional and partner campaigns</summary>
-
-        <div class="case-body">
-          <h4>The challenge</h4>
-          <p>
-            Build compelling campaigns across markets with different
-            customer behaviors, competitive conditions, and cultural
-            moments. Identify which offers and messages give
-            customers a reason to choose Remitly while balancing
-            growth and acquisition cost.
-          </p>
-
-          <h4>What I owned</h4>
-          <p>
-            Worked with regional teams to understand local customer
-            needs and translate them into relevant offers and
-            campaign messaging. Launched holiday and seasonal
-            campaigns, adapting the proposition and timing to
-            moments that mattered in each market.
-          </p>
-
-          <p style="margin-top: 12px;">
-            Partnered with external partners and internal marketing
-            teams to bring co-marketing campaigns to market,
-            aligning the customer proposition, messaging, and
-            launch plan around the value of the partnership.
-          </p>
-
-          <p style="margin-top: 12px;">
-            Built testing plans with Analytics and regional teams
-            to evaluate different offers and use the findings
-            to inform future campaigns.
-          </p>
-
-          <h4>A key decision</h4>
-          <p>
-            Tailor the campaign approach by market. Used local
-            insights to shape the offer, message, and timing,
-            then tested where incentives strengthened customer
-            acquisition and repeat usage—and where spending
-            could be reduced.
-          </p>
-
-          <h4>What it enabled</h4>
-          <p>
-            A portfolio of regional, seasonal, and partner campaigns
-            grounded in local customer needs, supported by a
-            repeatable approach to learning what to scale,
-            refine, or stop.
-          </p>
-        </div>
-      </details>
-    </article>
-
-    <!-- 04: PERSONALIZATION -->
-    <article class="card">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="tag">04 / AI &amp; personalization</span>
-          <span class="label">B2C · Remitly</span>
-        </div>
-
-        <h3>
-          From campaign insights<br>
-          to intelligent personalization.
-        </h3>
-
-        <p>
-          Identified an opportunity to make conversion and retention
-          marketing more relevant to individual customers. Turned
-          learnings from regional campaigns and experiments into
-          a personalization strategy, partnering with Data Science
-          and AI/ML teams to develop and operationalize models for
-          targeted offers and automated marketing workflows.
-        </p>
-
-        <div class="visual">
-          <span class="pill">Customer insights</span>
-          <span class="pill">Predictive targeting</span>
-          <span class="pill">Marketing automation</span>
-        </div>
-
-        <p class="role">
-          <span>My role:</span>
-          Personalization strategy, marketing use cases,
-          experimentation, and model activation.
-        </p>
-      </div>
-
-      <details>
-        <summary>Explore the personalization strategy</summary>
-
-        <div class="case-body">
-          <h4>The challenge</h4>
-          <p>
-            Broad offers treated customers similarly despite
-            differences in their needs and likelihood to return.
-            Manual campaign processes also took time and limited
-            how precisely we could deploy marketing investment.
-            The opportunity was to use customer insights and
-            machine learning to make more relevant decisions
-            at scale.
-          </p>
-
-          <h4>What I owned</h4>
-          <p>
-            Recognized the need for a more tailored approach based
-            on learnings from the campaigns and tests I ran.
-            Defined the marketing opportunity: identify which
-            customers to engage, where an incentive could influence
-            conversion or repeat usage, and how to evaluate the
-            business impact.
-          </p>
-
-          <p style="margin-top: 12px;">
-            Partnered with Data Science to translate those learnings
-            into model requirements and testing plans. Worked with
-            AI/ML, Product, and Engineering teams to bring model
-            outputs into marketing workflows and automate
-            offer deployment.
-          </p>
-
-          <h4>A key decision</h4>
-          <p>
-            Start with a concrete customer behavior—encouraging
-            the next transfer—and connect model development to a
-            measurable marketing outcome. Shaped the targeting
-            strategy and experiments to assess whether personalization
-            could generate additional customer activity while
-            improving spending efficiency.
-          </p>
-
-          <h4>What it enabled</h4>
-          <p>
-            Reduced manual campaign work, saved execution time,
-            and supported more efficient deployment of promotional
-            dollars. Established a foundation for marketing that
-            continuously applies customer insights through
-            automated, model-informed decisions.
-          </p>
-        </div>
-      </details>
-    </article>
-
-    <!-- 05: CONVERSATIONAL AI / WHATSAPP -->
-    <article class="card">
-      <div class="card-top">
-        <div class="card-meta">
-          <span class="tag">05 / Conversational AI &amp; expansion</span>
-          <span class="label">B2C · Remitly</span>
-        </div>
-
-        <h3>
-          Conversational AI:<br>
-          Taking WhatsApp to 18 markets in one year.
-        </h3>
-
-        <p>
-          Helped shape the acquisition strategy and positioning
-          for Remitly’s WhatsApp sending experience, supporting
-          its expansion to 18 markets within one year. Connected
-          customer insights, messaging, and channel growth to
-          introduce a familiar way to start sending money.
-        </p>
-
-        <div class="visual">
-          <span class="pill">Acquisition strategy</span>
-          <span class="pill">Product positioning</span>
-          <span class="pill">Market expansion</span>
-        </div>
-
-        <p class="role">
-          <span>My role:</span>
-          Acquisition strategy, customer messaging,
-          and go-to-market expansion.
-        </p>
-      </div>
-
-      <details>
-        <summary>Explore the WhatsApp launch and expansion</summary>
-
-        <div class="case-body">
-          <h4>The challenge</h4>
-          <p>
-            Reach customers who were comfortable using WhatsApp
-            but hesitant to adopt digital money transfers.
-            Establish a compelling reason to try Remitly through
-            conversation, then expand the channel across markets.
-          </p>
-
-          <h4>The customer insight</h4>
-          <p>
-            The barrier wasn’t simply access to technology—it was
-            confidence in trying a different way to send money.
-            A conversational experience offered customers a familiar
-            place to ask questions, understand pricing, and get
-            started without downloading another app.
-          </p>
-
-          <h4>What I owned</h4>
-          <p>
-            Contributed to the channel’s acquisition strategy,
-            identifying how a familiar messaging experience could
-            help customers move from consideration to their
-            first transfer.
-          </p>
-
-          <p style="margin-top: 12px;">
-            Helped shape positioning and customer messaging around
-            ease, confidence, and getting started without downloading
-            another app. Partnered with Product, regional Marketing,
-            and channel teams to bring that proposition to market
-            and support expansion.
-          </p>
-
-          <h4>The go-to-market approach</h4>
-          <p>
-            Connected paid media, landing pages, community outreach,
-            and lifecycle messaging to introduce WhatsApp as a new
-            entry point into Remitly. The proposition focused on
-            customer value: explore the service, get answers,
-            and begin a transfer through a familiar conversation.
-          </p>
-
-          <h4>A key positioning decision</h4>
-          <p>
-            Lead with ease and confidence in getting started.
-            Previous marketing learnings suggested that emphasizing
-            customer support could create anxiety about potential
-            problems, so acquisition messaging prioritized the
-            sending experience.
-          </p>
-
-          <h4>What it enabled</h4>
-          <p>
-            Supported the channel’s expansion to 18 markets within
-            one year, creating a broader acquisition entry point
-            and a foundation for learning how conversational
-            experiences can support digital adoption. Early customer
-            behavior informed improvements to the product and
-            marketing experience.
-          </p>
-        </div>
-      </details>
-    </article>
-
-  </div>
-</section>
-
-      <!-- B2B / INDIA EXPERIENCE -->
-      <section id="b2b" aria-labelledby="b2b-title">
-        <div class="eyebrow">B2B partnerships &amp; product adoption / India</div>
-
-        <h2 id="b2b-title">
-          Building business relationships.<br>
-          Bringing financial products into use.
+        <h2 id="work-title">
+          Customer insights.<br>
+          Compelling propositions. Global growth.
         </h2>
 
         <p class="subtitle">
-          Before Remitly, I worked across banking partnerships and
-          lending technology in India. These experiences shaped how
-          I think about business buyers, partner value, and the work
-          required to turn a product agreement into adoption.
+          Selected work across acquisition strategy, customer
+          messaging, regional campaigns, personalization, and
+          conversational AI. From shaping the proposition to
+          bringing it to market, I connect customer understanding
+          with product experiences and measurable business outcomes.
         </p>
 
         <div class="grid">
-          <article class="card b2b-card">
+
+          <!-- CANADA -->
+          <article class="card">
             <div class="card-top">
               <div class="card-meta">
-                <span class="tag">07 / Banking partnerships</span>
-                <span class="label">B2B2C · India</span>
+                <span class="tag">01 / Positioning &amp; go-to-market</span>
+                <span class="label">B2C · Remitly</span>
               </div>
 
-              <h3>ZestMoney:<br>Connecting banking partnerships to consumer access.</h3>
+              <h3>
+                Canada:<br>
+                Building customer preference in a competitive market.
+              </h3>
 
               <p>
-                Led banking partnerships at a buy-now-pay-later fintech,
-                helping scale financial products to millions of consumers.
-                The work connected institutional relationships with
-                consumer product distribution.
+                Helped shape a Canada-wide go-to-market strategy
+                connecting customer needs, competitive positioning,
+                and clear messaging. Worked across Marketing and
+                Product to give customers a compelling reason to
+                choose Remitly and reinforce that value throughout
+                their journey.
               </p>
 
               <div class="visual">
-                <span class="pill">Banking partners</span>
-                <span class="pill">Consumer finance</span>
-                <span class="pill">Product scale</span>
+                <span class="pill">Audience insights</span>
+                <span class="pill">Positioning</span>
+                <span class="pill">Go-to-market strategy</span>
               </div>
 
               <p class="role">
-                <span>My focus:</span>
-                Banking partnerships and scaling consumer financial products
+                <span>My role:</span>
+                Customer value proposition, messaging,
+                product merchandising, and launch strategy.
+              </p>
+            </div>
+
+            <details>
+              <summary>Explore the Canada strategy</summary>
+
+              <div class="case-body">
+                <h4>The challenge</h4>
+                <p>
+                  Earn customer preference in a competitive market
+                  where customers were balancing tighter household
+                  budgets with their commitment to supporting
+                  family abroad. Strengthen Remitly’s appeal in
+                  established markets while reaching a broader
+                  mix of customers across Canada.
+                </p>
+
+                <h4>The audience strategy</h4>
+                <p>
+                  Worked with regional partners to understand
+                  differences across customer communities and
+                  sending destinations. Considered how sending
+                  frequency, sensitivity to cost, and confidence
+                  in switching providers could influence the
+                  acquisition approach.
+                </p>
+
+                <p>
+                  The strategic question: what would give each
+                  audience a meaningful reason to choose Remitly
+                  and continue using it beyond their first transfer?
+                </p>
+
+                <h4>What I owned</h4>
+                <p>
+                  Led the promotional strategy and launch workstream
+                  across Marketing, Product, Finance, Analytics,
+                  and Lifecycle. Helped translate the offer into
+                  a clear customer value proposition and messaging,
+                  and shaped merchandising placements to support
+                  discovery, conversion, and repeat transfers.
+                </p>
+
+                <h4>A key decision</h4>
+                <p>
+                  Build a common Canada-wide proposition around
+                  better exchange rates and transfer fee savings
+                  across the first three transfers, with adaptations
+                  for specific markets. Communicate value beyond
+                  the first transaction and reinforce it through
+                  messaging and product placements, using a phased
+                  rollout as new experiences became available.
+                </p>
+
+                <h4>What it enabled</h4>
+                <p>
+                  A coordinated Canada-wide launch connecting
+                  audience needs, positioning, customer messaging,
+                  and the product experience. Measurement focused
+                  on new customer acquisition, repeat transfers,
+                  and acquisition cost.
+                </p>
+              </div>
+            </details>
+          </article>
+
+          <!-- CHINA -->
+          <article class="card purple">
+            <div class="card-top">
+              <div class="card-meta">
+                <span class="tag">02 / Audience &amp; positioning</span>
+                <span class="label">B2C · Remitly</span>
+              </div>
+
+              <h3>
+                Global China:<br>
+                A new approach to winning customers.
+              </h3>
+
+              <p>
+                Used audience research to shape an acquisition
+                strategy for customers sending money to China—a
+                segment where growth had been challenging.
+                Connected a compelling offer with tailored messaging
+                across paid media, Chinese community channels,
+                and the product experience.
+              </p>
+
+              <div class="visual">
+                <span class="pill">Audience insights</span>
+                <span class="pill">Value proposition</span>
+                <span class="pill">Multichannel strategy</span>
+              </div>
+
+              <p class="role">
+                <span>My role:</span>
+                Audience research, offer positioning,
+                channel messaging strategy, and product merchandising.
+              </p>
+            </div>
+
+            <details>
+              <summary>Explore the China campaign</summary>
+
+              <div class="case-body">
+                <h4>The challenge</h4>
+                <p>
+                  Give customers sending money to China a stronger
+                  reason to choose Remitly and keep using it.
+                  The opportunity was to communicate value beyond
+                  an introductory offer, reaching customers through
+                  relevant channels and reinforcing that value
+                  throughout their journey.
+                </p>
+
+                <h4>What I owned</h4>
+                <p>
+                  Researched the audience and drew on customer,
+                  community, and competitor insights to help shape
+                  the offer and messaging strategy. Partnered with
+                  regional marketing and channel leads to translate
+                  the proposition into English and Chinese
+                  communications across paid media, landing pages,
+                  lifecycle messaging, WeChat, Rednote, influencers,
+                  and community events.
+                </p>
+
+                <p>
+                  Helped shape new product merchandising to make
+                  the offer visible at key conversion moments and
+                  connect the acquisition message with the experience
+                  customers encountered after signing up.
+                </p>
+
+                <h4>A key decision</h4>
+                <p>
+                  Communicate savings across the first two transfers
+                  upfront, rather than revealing the next benefit
+                  later. The hypothesis: showing customers more
+                  of the value available could reduce uncertainty
+                  about future pricing, strengthen their reason
+                  to sign up, and encourage a second transfer.
+                </p>
+
+                <h4>What it enabled</h4>
+                <p>
+                  A launched campaign connecting audience insights,
+                  channel messaging, and product merchandising
+                  across multiple markets. Established a test of
+                  whether communicating future value upfront could
+                  improve acquisition, repeat usage, and customer
+                  profitability.
+                </p>
+              </div>
+            </details>
+          </article>
+
+          <!-- GLOBAL CAMPAIGNS -->
+          <article class="card orange">
+            <div class="card-top">
+              <div class="card-meta">
+                <span class="tag">03 / Regional &amp; partner marketing</span>
+                <span class="label">B2C · Remitly</span>
+              </div>
+
+              <h3>
+                Global reach.<br>
+                Locally relevant campaigns.
+              </h3>
+
+              <p>
+                Launched campaigns across Asia Pacific, Latin
+                America, North America, Europe, the Middle East,
+                and Africa—adapting offers, messaging, and launch
+                timing to local customer needs. Combined seasonal
+                campaigns, partner collaborations, and experimentation
+                to understand what resonates in each market.
+              </p>
+
+              <div class="visual">
+                <span class="pill">Market insights</span>
+                <span class="pill">Localized campaigns</span>
+                <span class="pill">Partner marketing</span>
+              </div>
+
+              <p class="role">
+                <span>My role:</span>
+                Regional go-to-market strategy, offer positioning,
+                seasonal launches, co-marketing, and experimentation.
+              </p>
+            </div>
+
+            <details>
+              <summary>Explore regional and partner campaigns</summary>
+
+              <div class="case-body">
+                <h4>The challenge</h4>
+                <p>
+                  Build compelling campaigns across markets with
+                  different customer behaviors, competitive
+                  conditions, and cultural moments. Identify which
+                  offers and messages give customers a reason to
+                  choose Remitly while balancing growth and
+                  acquisition cost.
+                </p>
+
+                <h4>What I owned</h4>
+                <p>
+                  Worked with regional teams to understand local
+                  customer needs and translate them into relevant
+                  offers and campaign messaging. Launched holiday
+                  and seasonal campaigns, adapting the proposition
+                  and timing to moments that mattered in each market.
+                </p>
+
+                <p>
+                  Partnered with external partners and internal
+                  marketing teams to bring co-marketing campaigns
+                  to market, aligning the customer proposition,
+                  messaging, and launch plan around the value
+                  of the partnership.
+                </p>
+
+                <p>
+                  Built testing plans with Analytics and regional
+                  teams to evaluate different offers and use the
+                  findings to inform future campaigns.
+                </p>
+
+                <h4>A key decision</h4>
+                <p>
+                  Tailor the campaign approach by market. Used local
+                  insights to shape the offer, message, and timing,
+                  then tested where incentives strengthened customer
+                  acquisition and repeat usage—and where spending
+                  could be reduced.
+                </p>
+
+                <h4>What it enabled</h4>
+                <p>
+                  A portfolio of regional, seasonal, and partner
+                  campaigns grounded in local customer needs,
+                  supported by a repeatable approach to learning
+                  what to scale, refine, or stop.
+                </p>
+              </div>
+            </details>
+          </article>
+
+          <!-- PERSONALIZATION -->
+          <article class="card teal">
+            <div class="card-top">
+              <div class="card-meta">
+                <span class="tag">04 / AI &amp; personalization</span>
+                <span class="label">B2C · Remitly</span>
+              </div>
+
+              <h3>
+                From campaign insights<br>
+                to intelligent personalization.
+              </h3>
+
+              <p>
+                Identified an opportunity to make conversion and
+                retention marketing more relevant to individual
+                customers. Turned learnings from regional campaigns
+                and experiments into a personalization strategy,
+                partnering with Data Science and AI/ML teams to
+                develop and operationalize models for targeted
+                offers and automated marketing workflows.
+              </p>
+
+              <div class="visual">
+                <span class="pill">Customer insights</span>
+                <span class="pill">Predictive targeting</span>
+                <span class="pill">Marketing automation</span>
+              </div>
+
+              <p class="role">
+                <span>My role:</span>
+                Personalization strategy, marketing use cases,
+                experimentation, and model activation.
+              </p>
+            </div>
+
+            <details>
+              <summary>Explore the personalization strategy</summary>
+
+              <div class="case-body">
+                <h4>The challenge</h4>
+                <p>
+                  Broad offers treated customers similarly despite
+                  differences in their needs and likelihood to
+                  return. Manual campaign processes also took time
+                  and limited how precisely we could deploy marketing
+                  investment. The opportunity was to use customer
+                  insights and machine learning to make more relevant
+                  decisions at scale.
+                </p>
+
+                <h4>What I owned</h4>
+                <p>
+                  Recognized the need for a more tailored approach
+                  based on learnings from the campaigns and tests
+                  I ran. Defined the marketing opportunity: identify
+                  which customers to engage, where an incentive
+                  could influence conversion or repeat usage,
+                  and how to evaluate the business impact.
+                </p>
+
+                <p>
+                  Partnered with Data Science to translate those
+                  learnings into model requirements and testing
+                  plans. Worked with AI/ML, Product, and Engineering
+                  teams to bring model outputs into marketing
+                  workflows and automate offer deployment.
+                </p>
+
+                <h4>A key decision</h4>
+                <p>
+                  Start with a concrete customer behavior—encouraging
+                  the next transfer—and connect model development
+                  to a measurable marketing outcome. Shaped the
+                  targeting strategy and experiments to assess
+                  whether personalization could generate additional
+                  customer activity while improving spending efficiency.
+                </p>
+
+                <h4>What it enabled</h4>
+                <p>
+                  Reduced manual campaign work, saved execution time,
+                  and supported more efficient deployment of
+                  promotional dollars. Established a foundation
+                  for marketing that continuously applies customer
+                  insights through automated, model-informed decisions.
+                </p>
+              </div>
+            </details>
+          </article>
+
+          <!-- WHATSAPP -->
+          <article class="card sky">
+            <div class="card-top">
+              <div class="card-meta">
+                <span class="tag">05 / Conversational AI &amp; expansion</span>
+                <span class="label">B2C · Remitly</span>
+              </div>
+
+              <h3>
+                Conversational AI:<br>
+                Taking WhatsApp to 18 markets in one year.
+              </h3>
+
+              <p>
+                Helped shape the acquisition strategy and positioning
+                for Remitly’s WhatsApp sending experience, supporting
+                its expansion to 18 markets within one year.
+                Connected customer insights, messaging, and channel
+                growth to introduce a familiar way to start
+                sending money.
+              </p>
+
+              <div class="visual">
+                <span class="pill">Acquisition strategy</span>
+                <span class="pill">Product positioning</span>
+                <span class="pill">Market expansion</span>
+              </div>
+
+              <p class="role">
+                <span>My role:</span>
+                Acquisition strategy, customer messaging,
+                and go-to-market expansion.
+              </p>
+            </div>
+
+            <details>
+              <summary>Explore the WhatsApp launch and expansion</summary>
+
+              <div class="case-body">
+                <h4>The challenge</h4>
+                <p>
+                  Reach customers who were comfortable using WhatsApp
+                  but hesitant to adopt digital money transfers.
+                  Establish a compelling reason to try Remitly
+                  through conversation, then expand the channel
+                  across markets.
+                </p>
+
+                <h4>The customer insight</h4>
+                <p>
+                  The barrier wasn’t simply access to technology—it
+                  was confidence in trying a different way to send
+                  money. A conversational experience offered
+                  customers a familiar place to ask questions,
+                  understand pricing, and get started without
+                  downloading another app.
+                </p>
+
+                <h4>What I owned</h4>
+                <p>
+                  Contributed to the channel’s acquisition strategy,
+                  identifying how a familiar messaging experience
+                  could help customers move from consideration
+                  to their first transfer.
+                </p>
+
+                <p>
+                  Helped shape positioning and customer messaging
+                  around ease, confidence, and getting started without
+                  downloading another app. Partnered with Product,
+                  regional Marketing, and channel teams to bring
+                  that proposition to market and support expansion.
+                </p>
+
+                <h4>The go-to-market approach</h4>
+                <p>
+                  Connected paid media, landing pages, community
+                  outreach, and lifecycle messaging to introduce
+                  WhatsApp as a new entry point into Remitly.
+                  The proposition focused on customer value:
+                  explore the service, get answers, and begin
+                  a transfer through a familiar conversation.
+                </p>
+
+                <h4>A key positioning decision</h4>
+                <p>
+                  Lead with ease and confidence in getting started.
+                  Previous marketing learnings suggested that
+                  emphasizing customer support could create anxiety
+                  about potential problems, so acquisition messaging
+                  prioritized the sending experience.
+                </p>
+
+                <h4>What it enabled</h4>
+                <p>
+                  Supported the channel’s expansion to 18 markets
+                  within one year, creating a broader acquisition
+                  entry point and a foundation for learning how
+                  conversational experiences can support digital
+                  adoption. Early customer behavior informed
+                  improvements to the product and marketing experience.
+                </p>
+              </div>
+            </details>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- B2B AND PRODUCT EXPERIENCE -->
+      <section id="b2b" aria-labelledby="b2b-title">
+        <div class="eyebrow">
+          Product commercialization &amp; partner growth / India
+        </div>
+
+        <h2 id="b2b-title">
+          From partner needs<br>
+          to products that scale.
+        </h2>
+
+        <p class="subtitle">
+          Before Remitly, I worked on commercializing financial
+          technology and driving its adoption across banking partners
+          in India. At ZestMoney, I connected partner needs with
+          product requirements and new commercial opportunities.
+          At Artoo, I helped turn lending technology into practical
+          workflows that teams could adopt at scale.
+        </p>
+
+        <div class="grid">
+
+          <!-- ZESTMONEY -->
+          <article class="card teal">
+            <div class="card-top">
+              <div class="card-meta">
+                <span class="tag">B2B2C / Product commercialization</span>
+                <span class="label">ZestMoney · India</span>
+              </div>
+
+              <h3>
+                ZestMoney:<br>
+                From banking partner needs to commercial products.
+              </h3>
+
+              <p>
+                Identified and validated an opportunity to
+                commercialize ZestMoney’s technology platform
+                for banking partners. Connected partner needs,
+                product requirements, and a commercialization
+                model, while expanding banking relationships
+                to support consumer lending growth.
+              </p>
+
+              <div class="visual">
+                <span class="pill">Product strategy</span>
+                <span class="pill">Commercialization</span>
+                <span class="pill">Banking partnerships</span>
+              </div>
+
+              <p class="role">
+                <span>My role:</span>
+                Product opportunity validation, partner requirements,
+                commercialization, and banking partnerships.
               </p>
             </div>
 
@@ -1245,56 +1216,99 @@
               <summary>Explore the ZestMoney experience</summary>
 
               <div class="case-body">
-                <h4>The business context</h4>
+                <h4>Role &amp; context</h4>
                 <p>
-                  Consumer lending brings together two sets of needs:
-                  financial institutions need a compelling partnership,
-                  and consumers need an accessible, useful product.
+                  Manager, promoted to Senior Manager — Product,
+                  Banking Partnerships · December 2019–August 2022.
+                  Worked across consumer lending, technology,
+                  and banking partnerships.
                 </p>
 
-                <h4>My contribution</h4>
+                <h4>The challenge</h4>
                 <p>
-                  Led banking partnerships and helped scale products
-                  to millions of consumers, working at the intersection
-                  of institutional relationships and consumer finance.
+                  Identify how ZestMoney’s technology could create
+                  value for banking partners, then translate that
+                  opportunity into commercial products. In parallel,
+                  expand access to lending capital and support
+                  growth across the consumer business.
                 </p>
 
-                <h4>The B2B2C perspective</h4>
+                <h4>Product strategy &amp; commercialization</h4>
                 <p>
-                  This experience shaped my approach to connecting
-                  the partner proposition with the end-customer
-                  experience, and to evaluating growth through both
-                  business relationships and consumer adoption.
+                  Assessed demand for the platform among banking
+                  partners and helped shape the commercialization
+                  model. Translated partner needs into product
+                  requirements and led product revisions from
+                  concept through commercialization, contributing
+                  to 8% annual revenue growth.
+                </p>
+
+                <p>
+                  Led cross-functional teams of 12+ members across
+                  Operations, Finance, and Technology, aligning
+                  product changes with partner requirements and
+                  business priorities. The broader product work
+                  supported engagement across 3M+ consumers.
+                </p>
+
+                <h4>Banking partnerships &amp; scale</h4>
+                <p>
+                  Identified and onboarded eight new banking
+                  partners within 15 months. Expanded access to
+                  lower-cost lending capital and increased the
+                  share of partner-funded loan originations from
+                  20% to 60%, while diversifying funding risk.
+                </p>
+
+                <h4>Customer experience improvements</h4>
+                <p>
+                  Partnered with credit agencies to address
+                  customer pain points through technology
+                  enhancements, reducing escalations by 45%
+                  and saving more than 1,000 staff hours annually.
+                </p>
+
+                <h4>What it demonstrates</h4>
+                <p>
+                  Connecting market demand and partner relationships
+                  with product requirements, commercialization,
+                  and measurable customer and business outcomes.
                 </p>
               </div>
             </details>
           </article>
 
-          <article class="card b2b-card">
+          <!-- ARTOO -->
+          <article class="card sky">
             <div class="card-top">
               <div class="card-meta">
-                <span class="tag">08 / Lending technology adoption</span>
-                <span class="label">B2B · India</span>
+                <span class="tag">B2B / Product adoption &amp; expansion</span>
+                <span class="label">Artoo · India</span>
               </div>
 
-              <h3>Artoo:<br>Turning lending technology into everyday adoption.</h3>
+              <h3>
+                Artoo:<br>
+                From lending software to adoption at scale.
+              </h3>
 
               <p>
-                Drove lending technology adoption across hundreds
-                of branches, building experience in how business
-                software becomes part of distributed teams'
-                day-to-day work.
+                Helped banking partners digitize lending operations
+                by connecting client needs with product improvements,
+                implementation, and team enablement. Scaled
+                deployment from 35 to 220 branches while helping
+                make lending workflows faster and easier to use.
               </p>
 
               <div class="visual">
-                <span class="pill">Lending technology</span>
-                <span class="pill">Branch adoption</span>
-                <span class="pill">Business users</span>
+                <span class="pill">Customer insights</span>
+                <span class="pill">Product adoption</span>
+                <span class="pill">Partner expansion</span>
               </div>
 
               <p class="role">
-                <span>My focus:</span>
-                Product adoption across distributed lending operations
+                <span>My role:</span>
+                Client requirements, product implementation,
+                partner enablement, and account expansion.
               </p>
             </div>
 
@@ -1302,41 +1316,73 @@
               <summary>Explore the Artoo experience</summary>
 
               <div class="case-body">
-                <h4>The business context</h4>
+                <h4>Role &amp; context</h4>
                 <p>
-                  Lending technology must create value for the
-                  organization purchasing it and the branch teams
-                  using it in their daily workflows.
+                  Account Manager, promoted to Senior Account
+                  Manager — Banking Technology Implementation
+                  Team · August 2017–November 2019.
+                  Worked on SaaS lending technology for
+                  financial institutions.
                 </p>
 
-                <h4>My contribution</h4>
+                <h4>The challenge</h4>
                 <p>
-                  Drove adoption of lending technology across hundreds
-                  of branches, connecting a technology product with
-                  the realities of distributed business operations.
+                  Help lending partners translate technology
+                  investment into practical improvements in
+                  branch and field operations. Successful
+                  expansion required a useful product, effective
+                  implementation, and adoption by the teams
+                  using it every day.
                 </p>
 
-                <h4>The B2B perspective</h4>
+                <h4>Customer needs &amp; product improvements</h4>
                 <p>
-                  This experience grounded my product marketing
-                  approach in practical adoption: understanding users'
-                  work, making product value clear, and considering
-                  what teams need to put a solution into use.
+                  Translated client pain points into product
+                  solutions aligned with the roadmap. Bridged
+                  business and technical teams to improve lending
+                  workflows, reducing loan processing time by 43%.
+                </p>
+
+                <h4>Implementation &amp; partner enablement</h4>
+                <p>
+                  Trained banking and field partners on adoption
+                  and supported the digitization of lending
+                  operations. Helped scale deployment from
+                  35 to 220 branches serving 3M borrowers.
+                </p>
+
+                <h4>Commercial growth</h4>
+                <p>
+                  Grew revenue through partner upsells, new
+                  credit products, and A/B-tested offers.
+                  This work contributed to $210M in loan
+                  disbursements to 1M micro-entrepreneurs.
+                </p>
+
+                <h4>What it demonstrates</h4>
+                <p>
+                  Turning customer feedback into product
+                  improvements, supporting adoption through
+                  implementation and enablement, and connecting
+                  customer value with account growth.
                 </p>
               </div>
             </details>
           </article>
+
         </div>
 
         <div class="perspective">
-          <h3>One perspective across B2B and B2C</h3>
+          <h3>Connecting product, commercialization, and growth</h3>
+
           <p>
-            At ZestMoney, I worked through banking partnerships to
-            reach consumers. At Artoo, I focused on technology adoption
-            within lending operations. At Remitly, I work on consumer
-            acquisition and early retention. Together, these experiences
-            help me connect the buyer, the user, and the business
-            outcome when shaping a go-to-market approach.
+            My India experience taught me to connect the needs
+            of business buyers, partners, and end users.
+            At ZestMoney, that meant shaping commercial products
+            and banking partnerships. At Artoo, it meant translating
+            client needs into product improvements and adoption.
+            At Remitly, I apply that perspective to consumer
+            positioning, go-to-market strategy, and growth.
           </p>
         </div>
       </section>
@@ -1354,49 +1400,52 @@
           <div>
             <p class="about">
               I started my career as a software engineer and earned
-              my MBA from Carnegie Mellon University's Tepper School
-              of Business. My work has since spanned banking
-              partnerships, lending technology, and consumer fintech.
+              my MBA from Carnegie Mellon University's Tepper
+              School of Business. My experience spans enterprise
+              lending technology, consumer finance, banking
+              partnerships, and global money transfers.
             </p>
 
             <p class="about">
-              Across ZestMoney, Artoo, and Remitly, I've worked on
-              different routes to growth: building partner relationships,
-              driving product adoption, launching consumer offers,
-              and developing experiments that guide investment.
+              Across Artoo, ZestMoney, and Remitly, I've worked
+              on different routes to growth: translating customer
+              needs into product improvements, commercializing
+              technology, building partner relationships, and
+              launching consumer propositions.
             </p>
 
             <p class="about">
-              Today, I bring that experience to product marketing
-              and growth: understanding the audience, defining the
-              proposition, aligning teams, and building a practical
-              path from strategy to adoption.
+              I bring that perspective to product marketing and
+              growth—understanding the audience, defining the value,
+              aligning teams, and building a practical path from
+              strategy to adoption.
             </p>
           </div>
 
           <div class="approach">
             <h3>Understand the buyer and the user</h3>
             <p>
-              Identify who makes the decision, who uses the product,
-              and what each needs to see value.
+              Identify who makes the decision, who uses the
+              product, and what each needs to see value.
             </p>
 
             <h3>Connect product value to business value</h3>
             <p>
-              Translate capabilities into relevant customer benefits
-              and a clear commercial proposition.
+              Translate capabilities into relevant customer
+              benefits and a clear commercial proposition.
             </p>
 
             <h3>Carry strategy through to adoption</h3>
             <p>
-              Align launch execution, partner readiness, customer
-              communication, and measurement.
+              Connect product requirements, launch execution,
+              partner readiness, and customer communication.
             </p>
 
-            <h3>Use evidence to guide the next decision</h3>
+            <h3>Use evidence to guide investment</h3>
             <p>
-              Bring customer economics, experimentation, and product
-              data into decisions about where to invest and improve.
+              Bring customer economics, experimentation,
+              and product data into decisions about where
+              to invest and improve.
             </p>
           </div>
         </div>
@@ -1413,9 +1462,9 @@
 
           <p class="subtitle">
             I'm interested in product marketing, go-to-market,
-            and growth leadership opportunities across B2B and B2C —
-            especially where financial products, technology, and
-            customer needs intersect.
+            and growth leadership opportunities across B2B and
+            B2C—especially where financial products, technology,
+            and customer needs intersect.
           </p>
 
           <!-- Add your LinkedIn or email link here. -->
@@ -1436,11 +1485,12 @@
           </div>
         </div>
       </section>
+
     </main>
 
     <footer>
       <span>© 2026 Lohit Lingam · Built with GitHub Pages</span>
-      <span>Product Marketing · B2B &amp; B2C · Fintech</span>
+      <span>Product Marketing · Product Strategy · Growth</span>
     </footer>
   </div>
 </body>
